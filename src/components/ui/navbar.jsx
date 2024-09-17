@@ -199,7 +199,7 @@ export function Navbar() {
   const router = useRouter();
 
   return (
-    <nav className="bg-base-200 text-[#005bea] transition-all">
+    <nav className=" text-[#005bea] transition-all">
       {/* menu items on large screens */}
       <div className="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
