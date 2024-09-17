@@ -36,6 +36,7 @@ import { RiSeoLine } from "react-icons/ri";
 import { SiGooglemarketingplatform } from "react-icons/si";
 import { PiStrategy } from "react-icons/pi";
 import { BsPersonWorkspace } from "react-icons/bs";
+import { useRouter } from "next/navigation";
 
 const menu = [
   {
@@ -195,6 +196,7 @@ const menu = [
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <nav className="bg-base-200 text-[#005bea] transition-all">
@@ -218,7 +220,7 @@ export function Navbar() {
               {menu.map((item) => (
                 <Dropdown key={item.name} item={item} />
               ))}
-              <button className="ml-8 px-4 py-2 rounded-md text-sm font-medium text-white bg-[#005bea] hover:bg-[#0046b5] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#005bea]">
+              <button onClick={() => router.push('/contact-us')} className="ml-8 px-4 py-2 rounded-md text-sm font-medium text-white bg-[#005bea] hover:bg-[#0046b5] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#005bea]">
                 Contact Us
               </button>
             </div>
@@ -259,6 +261,7 @@ export function Navbar() {
 function Dropdown({ item }) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const router = useRouter()
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -272,10 +275,16 @@ function Dropdown({ item }) {
     };
   }, []);
 
+  const navigateToPage= () => {
+    setIsOpen(!isOpen)
+
+    router.push(item.href)
+  }
+
   return (
     <div className="relative" ref={dropdownRef}>
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={navigateToPage}
         className="text-[#005bea] hover:bg-[#005bea] hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center"
       >
         {item.icon}
