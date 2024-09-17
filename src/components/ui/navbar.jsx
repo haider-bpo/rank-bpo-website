@@ -8,7 +8,6 @@ import {
   ChevronDown,
   Zap,
   Layers,
-  Users,
   Monitor,
   Smartphone,
   Globe,
@@ -30,7 +29,6 @@ import {
   Logs,
   Headset,
   ChartNetwork,
-  MessageCircleWarning,
   Library,
 } from "lucide-react";
 import Link from "next/link";
@@ -52,12 +50,12 @@ const menu = [
         subItems: [
           {
             name: "Web Development",
-            href: "/services/custom-development/web",
+            href: "/services/custom-development/web-development",
             icon: <Globe className="h-4 w-4" />,
           },
           {
             name: "Mobile Development",
-            href: "/services/custom-development/mobile",
+            href: "/services/custom-development/mobile-development",
             icon: <Smartphone className="h-4 w-4" />,
           },
           {
@@ -199,7 +197,7 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white text-[#005bea] transition-all">
+    <nav className="bg-base-200 text-[#005bea] transition-all">
       {/* menu items on large screens */}
       <div className="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -285,7 +283,7 @@ function Dropdown({ item }) {
         {item.subMenu && <ChevronDown className="ml-2 h-4 w-4" />}
       </button>
       {isOpen && item.subMenu && (
-        <div className="absolute z-10 left-0 mt-2 w-72 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+        <div className="absolute z-10 left-0 mt-2 w-72 rounded-md shadow-lg bg-base-200 ring-1 ring-black ring-opacity-5">
           <div
             className="py-1"
             role="menu"
@@ -402,7 +400,7 @@ const MobileMenuItem = ({ menuItem }) => {
                   {subItem.icon}
                   <a
                     href={subItem.href}
-                    className="ml-2 text-sm text-gray-700 hover:text-blue-500"
+                    className="ml-2 text-sm  hover:text-blue-500"
                   >
                     {subItem.name}
                   </a>

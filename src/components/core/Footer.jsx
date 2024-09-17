@@ -34,6 +34,14 @@ const quickLinks = [
     title: "Contact Us",
     url: "/contact-us",
   },
+  {
+    title: "Projects",
+    url: "/projects",
+  },
+  {
+    title: "Careers",
+    url: "/careers",
+  },
 ];
 
 const services = [
@@ -134,54 +142,35 @@ function Footer() {
           <h6 className="footer-title text-[#005BEA]">Contact Us</h6>
           <div className="cursor-pointer">
             <div className="flex gap-x-2 items-center">
-              <MdOutlinePhoneInTalk className="text-lg" />
+              <MdOutlinePhoneInTalk className="text-lg  text-blue-600" />
               <p>03000332782</p>
             </div>
             <div className="flex gap-x-2 items-center">
-              <MdOutlinePhoneInTalk className="text-lg" />
+              <MdOutlinePhoneInTalk className="text-lg  text-blue-600" />
               <p>04232322782</p>
             </div>
           </div>
           <div className="cursor-pointer">
             <div className="flex gap-x-2 items-center">
-              <MdOutlineMailOutline className="text-lg" />
+              <MdOutlineMailOutline className="text-lg  text-blue-600" />
               <p>info@rankbpo.com</p>
             </div>
           </div>
           <div className="cursor-pointer">
-            <div className="flex gap-x-2 items-center">
-              <IoLocationOutline className="text-3xl" />
+            <div className="flex gap-x-2 items-center ">
+              <IoLocationOutline className="text-lg text-blue-600" />
               <p>Plot# 90, Block D2, Phase 1 Johar Town, Lahore</p>
             </div>
           </div>
-          {/* <nav className="mt-3">
-            <h6 className="footer-title text-[#005BEA]">Service Area</h6>
-            <div className="cursor-pointer">
-              <div className="flex gap-x-2 items-center">
-                <IoLocationOutline className="text-lg" />
-                <p>South Orange County</p>
-              </div>
-            </div>
-          </nav> */}
         </nav>
       </footer>
-
-      {/* <div className="relative bg-base-200 pt-8 overflow-hidden h-10 border-b border-gray-500">
-        <motion.div
-          className="absolute bottom-0 left-0 w-full h-full flex justify-center items-center "
-          animate={{ x: ["-100%", "100%"] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        >
-          <FaCarSide className="text-5xl text-blue-600" />
-        </motion.div>
-      </div> */}
 
       <footer
         data-aos="fade-right"
         className="footer bg-base-200 text-base-content flex justify-center p-5"
       >
-        <span className="text-md font-semibold text-blue-600">
-          Copyright © 2023, Benedetto Auto Detail. All Rights Reserved.
+        <span className="text-lg font-semibold text-blue-600">
+        © 2021-24 Rank BPO . All Rights Reserved.
         </span>
       </footer>
     </>

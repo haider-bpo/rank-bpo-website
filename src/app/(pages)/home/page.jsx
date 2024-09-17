@@ -1,11 +1,13 @@
+import HeroSection from '@/components/core/HeroSection';
 import React from 'react'
 
 function HomePage() {
   return (
-    <div>HomePage
+    <>
 
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis qui, illum autem consequuntur numquam neque accusantium eveniet molestias, unde magni atque sequi sed necessitatibus nobis alias odit minus magnam recusandae voluptas ipsa veritatis! Ab, assumenda vitae nulla doloremque esse dignissimos, eum odio natus ad, consequuntur sed voluptates incidunt necessitatibus quis? Pariatur nesciunt sequi corporis iste nihil? Vel quisquam eveniet doloribus at nam adipisci earum repellat voluptatum amet consequatur temporibus error veniam similique voluptas asperiores corrupti, dolores, quo provident consequuntur iure a architecto, aspernatur et ipsam. Quidem debitis vel quas voluptas dicta ut officiis corporis ab est asperiores, dolorum necessitatibus facere cumque? Neque aliquid recusandae nemo minima, corporis necessitatibus accusamus impedit veniam excepturi, itaque aut labore? Magni recusandae quae sed sequi, nobis nam tempore at veritatis, obcaecati atque inventore officia porro cupiditate maiores repudiandae totam laborum, sapiente neque deserunt officiis consequatur voluptatibus tenetur aspernatur. Exercitationem ex repellendus porro quia ipsa neque odit. Vel saepe, odio vitae fuga dolor dicta, dolores illum ipsam omnis neque fugiat deleniti ut. Dolorem consectetur voluptate iure quasi debitis quidem exercitationem. Voluptatem modi ipsam similique aliquam totam sint ad et quis magni distinctio quisquam nemo facilis ut officiis esse doloremque ducimus alias laborum cum, error dolores. Sit saepe nulla voluptate, sequi distinctio doloribus odit vero consequuntur eaque. Saepe enim molestiae atque dicta ab. Vitae temporibus non omnis sunt, laborum enim quidem dignissimos tempore, error, eligendi rerum rem fuga! Doloremque veritatis sunt unde necessitatibus impedit culpa atque, ipsam quam tempora tempore assumenda fugiat in sit iusto, pariatur facilis nostrum excepturi reiciendis voluptates! Praesentium nisi reiciendis voluptas porro perspiciatis ea cum ab recusandae blanditiis cumque dolor doloremque officiis esse suscipit maxime itaque repudiandae nemo fuga quibusdam iusto, magnam modi explicabo! Earum error nihil officia reiciendis ex magnam sunt, aperiam accusantium delectus ducimus? Quod, repellat voluptatum in excepturi adipisci necessitatibus quae saepe animi tempore deleniti laborum laboriosam sed aliquid ex iusto sint rerum illum harum omnis? Dolorum, fugit facere? Ut dolores assumenda hic officiis vel. Rem, eveniet cum ad error itaque voluptatem porro.
-    </div>
+      <HeroSection/>
+
+    </>
   )
 }
 

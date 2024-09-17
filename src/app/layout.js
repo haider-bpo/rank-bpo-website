@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen grid grid-rows-[1fr_auto]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen dark`}
       >
         <Header />
         <div className="w-full h-full">{children}</div>
