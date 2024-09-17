@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export default function Home() {
   useEffect(() => {
     AOS.init({
-      duration: 100, // Customize the animation duration
+      duration: 400, // Customize the animation duration
       once: true, // Whether animation should happen only once
     });
   }, []);

@@ -8,8 +8,9 @@ import { RiCustomerService2Fill, RiTeamFill } from "react-icons/ri";
 
 function AboutUsPage({ showHeroSection = true }) {
   return (
-    <div className="bg-base-200">
-      {showHeroSection && <ImagesSliderShower />}
+    <div className="bg-base-200">y
+
+      {showHeroSection && <ImagesSliderShower title="About Us" pageName="About Us" />}
 
       {/* about us  */}
       <div className="min-h-[70vh] grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-x-10  p-10">
