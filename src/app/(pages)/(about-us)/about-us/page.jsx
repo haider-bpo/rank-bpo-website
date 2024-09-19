@@ -8,7 +8,7 @@ import { RiCustomerService2Fill, RiTeamFill } from "react-icons/ri";
 
 function AboutUsPage({ showHeroSection = true }) {
   return (
-    <div className="bg-base-200">y
+    <div className="bg-base-200">
 
       {showHeroSection && <ImagesSliderShower title="About Us" pageName="About Us" />}
 
@@ -91,58 +91,6 @@ function AboutUsPage({ showHeroSection = true }) {
             results from global locations that enable customers to achieve their
             business goals.
           </p>
-
-          {/* <div className="grid grid-cols-2 gap-5 p-10">
-            <div className="flex flex-col justify-center items-center">
-              <img
-                src="/icons/business-direction.svg"
-                alt="My Icon"
-                width="100"
-                height="100"
-              />
-              <h2 className="text-lg font-semibold">Data-Driven Decisions</h2>
-              <p className="text-md text-center">
-                With our strategies, we turn complex problems into growth
-                opportunities.
-              </p>
-            </div>
-            <div className="flex flex-col justify-center items-center">
-              <img
-                src="/icons/ideas.svg"
-                alt="My Icon"
-                width="100"
-                height="100"
-              />
-              <h2 className="text-lg font-semibold">Out-Smarting Ideas</h2>
-              <p className="text-md text-center">
-              We have united diverse intellectual minds to work harmoniously for your business outgrowth.
-              </p>
-            </div>
-            <div className="flex flex-col justify-center items-center">
-              <img
-                src="/icons/trust.svg"
-                alt="My Icon"
-                width="100"
-                height="100"
-              />
-              <h2 className="text-lg font-semibold">Infallible Trust</h2>
-              <p className="text-md text-center">
-              LLG is dedicated to total transparency and the satisfaction of our clients.
-              </p>
-            </div>
-            <div className="flex flex-col justify-center items-center">
-              <img
-                src="/icons/24-support.svg"
-                alt="My Icon"
-                width="100"
-                height="100"
-              />
-              <h2 className="text-lg font-semibold">24/7 Support</h2>
-              <p className="text-md text-center">
-              We are here, ready to tackle any problem that comes your way to growth anytime.
-              </p>
-            </div>
-          </div> */}
         </div>
       </div>
 
@@ -214,7 +162,7 @@ function AboutUsPage({ showHeroSection = true }) {
           </span>
 
           <h1 data-aos="fade-down" className="mt-10 text-white text-3xl font-semibold">
-            What Clients Say About Our Car detailing Service?
+            What Clients Say About Our Service?
           </h1>
         </div>
 

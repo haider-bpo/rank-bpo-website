@@ -1,12 +1,14 @@
 import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
 import React from "react";
-import { LayoutGrid } from "@/components/ui/layout-grid";
+import { ProjectsTimeline } from "./ProjectsViewer";
 
 function ProjectsPage({ showHeroSection = true }) {
   return (
     <div>
       {/* hero section  */}
-      {showHeroSection && <ImagesSliderShower title="Projects" pageName="Projects"/>}
+      {showHeroSection && (
+        <ImagesSliderShower title="Projects" pageName="Projects" />
+      )}
 
       <div className="flex flex-col items-center gap-2 pb-5">
         <span className="inline-block mt-20 text-2xl uppercase text-blue-600 border-b-4">
@@ -18,8 +20,8 @@ function ProjectsPage({ showHeroSection = true }) {
         </p>
       </div>
 
-      <div className="h-[250vh] py-10 w-full">
-        <LayoutGrid cards={cards} />
+      <div className="py-10">
+        <ProjectsTimeline />
       </div>
     </div>
   );
@@ -193,7 +195,6 @@ const cards = [
     className: "md:col-span-2",
     thumbnail: "/images/fsadggfdsz-scaled-1-1536x1024-1.jpg",
   },
-  
 ];
 
 const cards2 = [

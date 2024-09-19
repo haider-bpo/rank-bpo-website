@@ -3,10 +3,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { ImagesSlider } from "../ui/images-slider";
 
-export function ImagesSliderShower({
-  title = "main title",
-  pageName = "Page Name",
-}) {
+export function ImagesSliderShower({ title = "main title", pageName }) {
   const images = [
     "/images/589-scaled-1-1536x1024-1.jpg",
     "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
@@ -32,17 +29,21 @@ export function ImagesSliderShower({
         }}
         className="z-50 flex flex-col justify-center items-center"
       >
-        <motion.p
-          className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4"
-        >
+        <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
           {title}
         </motion.p>
-        <button
-          className="px-4 py-2 backdrop-blur-sm border bg-blue-300/10 border-blue-500/20 text-white mx-auto text-center rounded-full relative mt-4"
-        >
-          <span>Home <span className="text-blue-400 text-lg font-extrabold">→</span> {pageName}</span>
-          <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-blue-500 to-transparent" />
-        </button>
+        {pageName && (
+          <button className="px-4 py-2 backdrop-blur-sm border bg-blue-300/10 border-blue-500/20 text-white mx-auto text-center rounded-full relative mt-4">
+            <span>
+              Home
+              <>
+                <span className="text-blue-400 text-lg font-extrabold">→</span>
+                <span>{pageName}</span>
+              </>
+            </span>
+            <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-blue-500 to-transparent" />
+          </button>
+        )}
       </motion.div>
     </ImagesSlider>
   );

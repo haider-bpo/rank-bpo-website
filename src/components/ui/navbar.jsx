@@ -30,6 +30,7 @@ import {
   Headset,
   ChartNetwork,
   Library,
+  Film,
 } from "lucide-react";
 import Link from "next/link";
 import { RiSeoLine } from "react-icons/ri";
@@ -181,6 +182,13 @@ const menu = [
     name: "About Us",
     href: "/about-us",
     icon: <Library className="h-4 w-4" />,
+    subMenu: [
+      {
+        name: "Events",
+        href: "/events",
+        icon: <Film className="h-4 w-4" />,
+      }
+    ],
   },
   {
     name: "Projects",
@@ -314,12 +322,21 @@ function DropdownItem({ item }) {
 
   const hasSubItems = item.subItems && item.subItems.length > 0;
 
+  const router = useRouter();
+
+  const navigateToPage= () => {
+    setIsSubMenuOpen(!isSubMenuOpen)
+
+    router.push(item.href)
+  }
+
+
   return (
     <div className="z-100">
       {hasSubItems ? (
         <div>
           <button
-            onClick={() => setIsSubMenuOpen(!isSubMenuOpen)}
+            onClick={navigateToPage}
             className="w-full text-left px-4 py-2 text-sm text-[#005bea] hover:bg-[#005bea] hover:text-white flex items-center justify-between"
             role="menuitem"
           >
