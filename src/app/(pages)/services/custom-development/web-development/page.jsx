@@ -14,7 +14,7 @@ function WebDevelopment({ showHeroSection = true }) {
           className="w-full h-full flex items-center justify-center mt-4 p-10"
           data-aos="fade-right"
         >
-          <MediaPlayer src={"/videos/Web Development.json"} />
+          <MediaPlayer src={"/videos/web-dev.json"} />
         </div>
 
         {/* right side  */}

@@ -51,10 +51,10 @@ function CareersPage() {
               backgroundImage: `url(/images/business-meeting-and-teamwork-by-business-people-REGXPAZ.jpg)`,
             }}
           ></div>
-          <div className="relative z-10 p-10 w-[80vw] ps-[8vw] text-start pt-[40vh]">
+          <div className="relative z-10 p-10 md:w-[80vw] ps-[8vw] text-start pt-[40vh]">
             <h1
               data-aos="fade-down"
-              className="text-white mt-32 text-2xl md:text-5xl font-bold mb-4"
+              className="text-white mt-32 ps-2 text-2xl md:text-5xl font-bold mb-4"
             >
               We&apos;re looking for you!
             </h1>
@@ -76,13 +76,13 @@ function CareersPage() {
       </div>
 
       {/* available jobs */}
-      <div className="p-10 px-28">
+      <div className="p-10 md:px-28">
         <p
           data-aos="fade-right"
           className="text-4xl font-extrabold text-md text-opacity-85 font_barlow text-start"
         >
           OUR JOB OFFERS
-          <div className="w-[10%] h-1 rounded-full bg-blue-600 mt-5 ms-1"></div>
+          <div className="w-[40%] md:w-[10%] h-1 rounded-full bg-blue-600 mt-5 ms-1"></div>
         </p>
 
         <p className=" pt-10">
@@ -100,19 +100,19 @@ function CareersPage() {
       </div>
 
       {/* offers */}
-      <div className="p-10 px-28">
+      <div className="p-10 md:px-28">
         <p
           data-aos="fade-right"
           className="text-4xl font-extrabold text-md text-opacity-85 font_barlow text-start mb-10"
         >
           WHAT WE OFFER
-          <div className="w-[10%] h-1 rounded-full bg-blue-600 mt-5 ms-1"></div>
+          <div className="w-[40%] md:w-[10%] h-1 rounded-full bg-blue-600 mt-5 ms-1"></div>
         </p>
 
         {offers.map((offer) => (
           <div className=" my-4" key={offer.title}>
             <h2 className="font-semibold text-lg">{offer.title}</h2>
-            <p className="text-white/50">{offer.description}</p>
+            <p className="text-white/50 text-justify">{offer.description}</p>
           </div>
         ))}
       </div>

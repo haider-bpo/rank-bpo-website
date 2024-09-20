@@ -217,7 +217,7 @@ export function Navbar() {
 
           {/* menu items for large screen  */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-10 flex items-baseline space-x-4 rounded-lg">
               {menu.map((item) => (
                 <Dropdown key={item.name} item={item} />
               ))}
@@ -265,28 +265,33 @@ export function Navbar() {
 function Dropdown({ item }) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const timerRef = useRef(null);
   const router = useRouter();
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  const handleMouseEnter = () => {
+    // Clear any existing timer when entering
+    clearTimeout(timerRef.current);
+    setIsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    // Add a small delay before closing
+    timerRef.current = setTimeout(() => {
+      setIsOpen(false);
+    }, 50); // Delay of 200ms
+  };
 
   const navigateToPage = () => {
-    setIsOpen(!isOpen);
-
     router.push(item.href);
   };
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div
+      className="relative"
+      ref={dropdownRef}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <button
         onClick={navigateToPage}
         className="text-[#005bea] hover:bg-[#005bea] hover:text-white px-3 py-2 rounded-md text-sm font-medium flex items-center"
@@ -298,7 +303,7 @@ function Dropdown({ item }) {
       {isOpen && item.subMenu && (
         <div className="absolute z-10 left-0 mt-2 w-72 rounded-md shadow-lg bg-base-200 ring-1 ring-black ring-opacity-5">
           <div
-            className="py-1"
+            className="py-1 rounded-lg"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="options-menu"
@@ -315,19 +320,33 @@ function Dropdown({ item }) {
 
 function DropdownItem({ item }) {
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
-
+  const timerRef = useRef(null);
   const hasSubItems = item.subItems && item.subItems.length > 0;
-
   const router = useRouter();
 
-  const navigateToPage = () => {
-    setIsSubMenuOpen(!isSubMenuOpen);
+  const handleMouseEnter = () => {
+    // Clear any existing timer when entering
+    clearTimeout(timerRef.current);
+    setIsSubMenuOpen(true);
+  };
 
+  const handleMouseLeave = () => {
+    // Add a small delay before closing
+    timerRef.current = setTimeout(() => {
+      setIsSubMenuOpen(false);
+    }, 50); // Delay of 200ms
+  };
+
+  const navigateToPage = () => {
     router.push(item.href);
   };
 
   return (
-    <div className="z-100">
+    <div
+      className="z-100 relative bg-base-200 w-[20vw]"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       {hasSubItems ? (
         <div>
           <button
@@ -346,7 +365,7 @@ function DropdownItem({ item }) {
             />
           </button>
           {isSubMenuOpen && (
-            <div className="pl-4">
+            <div className="absolute left-full top-0 pl-0">
               {item.subItems.map((subItem) => (
                 <DropdownItem key={subItem.name} item={subItem} />
               ))}
@@ -367,6 +386,7 @@ function DropdownItem({ item }) {
   );
 }
 
+
 const MobileMenu = ({ menu }) => {
   return (
     <div className="mobile-menu p-4">
@@ -377,29 +397,41 @@ const MobileMenu = ({ menu }) => {
   );
 };
 
+
 const MobileMenuItem = ({ menuItem }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleOpen = () => setIsOpen(!isOpen);
+  const toggleOpen = (e) => {
+    // Prevent link navigation when toggling the submenu
+    e.stopPropagation();
+    setIsOpen(!isOpen);
+  };
+
+  const router = useRouter();
+
+  const navigateToPage = () => {
+    router.push(menuItem.href);
+  };
 
   return (
     <div className="mobile-menu-item">
       {/* Menu item with toggle for submenu */}
-      <div
-        className="menu-item-header flex justify-between items-center p-2 "
-        onClick={toggleOpen}
-      >
-        <div className="flex items-center">
+      <div className="menu-item-header flex justify-between items-center p-2">
+        {/* Clicking this navigates to the page */}
+        <div className="flex items-center" onClick={navigateToPage}>
           {menuItem.icon}
           <span className="ml-2">{menuItem.name}</span>
         </div>
-        {/* Toggle indicator */}
+
+        {/* Clicking this toggles the submenu */}
         {menuItem.subMenu || menuItem.subItems ? (
-          <ChevronDown
-            className={`ml-2 h-4 w-4 transform ${
-              isOpen ? "rotate-180" : "rotate-0"
-            }`}
-          />
+          <button onClick={toggleOpen} className="ml-2">
+            <ChevronDown
+              className={`h-4 w-4 transform ${
+                isOpen ? "rotate-180" : "rotate-0"
+              }`}
+            />
+          </button>
         ) : null}
       </div>
 
@@ -421,7 +453,7 @@ const MobileMenuItem = ({ menuItem }) => {
                   {subItem.icon}
                   <a
                     href={subItem.href}
-                    className="ml-2 text-sm  hover:text-blue-500"
+                    className="ml-2 text-sm hover:text-blue-500"
                   >
                     {subItem.name}
                   </a>
