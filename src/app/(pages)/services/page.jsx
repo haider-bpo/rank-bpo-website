@@ -10,40 +10,36 @@ const cardsdetail = [
     description:
       "Welcome to Rank BPO, your one-stop solution for premium digital services. We are a team of experienced...",
     url: "/services/custom-development",
-    iconVideoSrc: "/videos/0lVW4c3VGL0RIs9Ad5.mp4"
+    iconVideoSrc: "/videos/0lVW4c3VGL0RIs9Ad5.mp4",
   },
   {
-    image: "/images/creative-business-people-working-on-business-project-1536x1024-1.jpg",
+    image:
+      "/images/creative-business-people-working-on-business-project-1536x1024-1.jpg",
     title: "Digital Marketing",
     description:
       "CRYSTAL SERUM CERAMIC COATING provides a Supreme Hard Protection, Scratch & Swirls Resistant. This Coating Provides...",
     url: "/services/digital-marketing",
-    iconVideoSrc: "/videos/K93ci7841DV532yJ8u.mp4"
-
+    iconVideoSrc: "/videos/K93ci7841DV532yJ8u.mp4",
   },
   {
-    image: "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
+    image:
+      "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
     title: "Customer Support",
     description:
       "LEATHER GUARD COATING is made out of nanotechnology and is a Super Hydro-Phobic Coating that Protects, Leather...",
     url: "/services/customer-support",
-    iconVideoSrc: "/videos/1Jnw4Nae2Bg39q.mp4"
-
+    iconVideoSrc: "/videos/1Jnw4Nae2Bg39q.mp4",
   },
 ];
 
-function ServicesPage({ showHeroSection = true, limit}) {
-
+function ServicesPage({ showHeroSection = true, limit }) {
   const cardsToShow = limit ? cardsdetail.slice(0, limit) : cardsdetail;
 
   return (
     <div>
       {/* hero section  */}
       {showHeroSection && (
-        <ImagesSliderShower
-          title={"Services"}
-          pageName={"Services"}
-        />
+        <ImagesSliderShower title={"Services"} pageName={"Services"} />
       )}
 
       {/* service cards  */}
@@ -97,12 +93,6 @@ function ServicesPage({ showHeroSection = true, limit}) {
             url={url}
           />
         ))}
-      </div>
-
-      <div className="">
-
-        
-
       </div>
     </div>
   );

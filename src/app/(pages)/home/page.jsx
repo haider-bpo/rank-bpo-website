@@ -1,7 +1,7 @@
 import HeroSection from "@/components/core/HeroSection";
 import React from "react";
-import AboutUsPage from "../(about-us)/about-us/page";
-import EventsPage from "../(about-us)/events/page";
+import AboutUsPage from "../about-us/page";
+import EventsPage from "../events/page";
 
 function HomePage() {
   return (

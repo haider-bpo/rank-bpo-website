@@ -85,7 +85,7 @@ function CustomDevelopmentPage({ showHeroSection = true }) {
 
           <p
             data-aos="fade-up"
-            className="mt-2 text-lg text-opacity-85 font_barlow text-justify"
+            className="mt-2 text-lg text-opacity-85 text-justify custom_font"
           >
             A few years ago, when custom development services were not as
             critical as they are now, companies didn&apos;t always need close

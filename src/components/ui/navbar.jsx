@@ -182,18 +182,11 @@ const menu = [
     name: "About Us",
     href: "/about-us",
     icon: <Library className="h-4 w-4" />,
-    subMenu: [
-      {
-        name: "Events",
-        href: "/events",
-        icon: <Film className="h-4 w-4" />,
-      }
-    ],
   },
   {
-    name: "Projects",
-    href: "/projects",
-    icon: <Layers className="h-4 w-4" />,
+    name: "Events",
+    href: "/events",
+    icon: <Film className="h-4 w-4" />,
   },
   {
     name: "Careers",
@@ -228,7 +221,10 @@ export function Navbar() {
               {menu.map((item) => (
                 <Dropdown key={item.name} item={item} />
               ))}
-              <button onClick={() => router.push('/contact-us')} className="ml-8 px-4 py-2 rounded-md text-sm font-medium text-white bg-[#005bea] hover:bg-[#0046b5] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#005bea]">
+              <button
+                onClick={() => router.push("/contact-us")}
+                className="ml-8 px-4 py-2 rounded-md text-sm font-medium text-white bg-[#005bea] hover:bg-[#0046b5] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#005bea]"
+              >
                 Contact Us
               </button>
             </div>
@@ -269,7 +265,7 @@ export function Navbar() {
 function Dropdown({ item }) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
-  const router = useRouter()
+  const router = useRouter();
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -283,11 +279,11 @@ function Dropdown({ item }) {
     };
   }, []);
 
-  const navigateToPage= () => {
-    setIsOpen(!isOpen)
+  const navigateToPage = () => {
+    setIsOpen(!isOpen);
 
-    router.push(item.href)
-  }
+    router.push(item.href);
+  };
 
   return (
     <div className="relative" ref={dropdownRef}>
@@ -324,12 +320,11 @@ function DropdownItem({ item }) {
 
   const router = useRouter();
 
-  const navigateToPage= () => {
-    setIsSubMenuOpen(!isSubMenuOpen)
+  const navigateToPage = () => {
+    setIsSubMenuOpen(!isSubMenuOpen);
 
-    router.push(item.href)
-  }
-
+    router.push(item.href);
+  };
 
   return (
     <div className="z-100">

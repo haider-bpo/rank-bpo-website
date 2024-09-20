@@ -157,7 +157,7 @@ function CustomerSupportPage({ showHeroSection = true }) {
         </div>
       )}
 
-      <div className=" grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-4 p-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-4 p-10">
         {services.map(({ image, title, description, url }) => (
           <ServiceCard
             key={title}

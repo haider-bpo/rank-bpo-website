@@ -114,7 +114,7 @@ function DigitalMarketingPage({showHeroSection=true}) {
 
           <p
             data-aos="fade-up"
-            className="mt-2 text-lg text-opacity-85 font_barlow text-justify"
+            className="mt-2 text-lg text-opacity-85 custom_font text-justify"
           >
             A few years ago, when digital marketing was not as big as it is now,
             there was no need for a company&apos;s marketing department and their
