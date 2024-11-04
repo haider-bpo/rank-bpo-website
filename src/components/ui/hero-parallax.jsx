@@ -82,8 +82,7 @@ export const HeroParallax = ({ products }) => {
 };
 
 export const Header = () => {
-
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 ">
@@ -91,15 +90,18 @@ export const Header = () => {
         The Ultimate <br /> Development Service
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+        Does your business attract a small audience on the internet? If yes,
+        Rank BPO can revamp your strategy. Let’s uncover why your digital media
+        channels have failed to generate revenue despite repeated efforts.
       </p>
       <div className="mt-4">
         <TypewriterEffect />
       </div>
       <div className="mt-2 block md:hidden">
-        <ButtonBorderGradient text="Contact Us" onClick={() => router.push('/contact-us')} />
+        <ButtonBorderGradient
+          text="Contact Us"
+          onClick={() => router.push("/contact-us")}
+        />
       </div>
     </div>
   );

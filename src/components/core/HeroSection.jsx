@@ -2,105 +2,96 @@ import React from "react";
 import { HeroParallax } from "../ui/hero-parallax";
 
 function HeroSection() {
-  return <div className="overflow-x-hidden pb-10">
-    <HeroParallax products={products} />
-  </div>;
+  return (
+    <div className="overflow-x-hidden pb-10">
+      <HeroParallax products={products} />
+    </div>
+  );
 }
 
 export default HeroSection;
 
 export const products = [
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+    title: "services",
+    link: "/services",
+    thumbnail: "/images/589-scaled-1-1536x1024-1.jpg",
   },
   {
     title: "Cursor",
-    link: "https://cursor.so",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+    link: "/services/custom-development",
+    thumbnail: "/images/afsdcfgs-scaled-1-1536x1024-1-1.jpg",
   },
   {
     title: "Rogue",
-    link: "https://userogue.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+    link: "/services/customer-support",
+    thumbnail: "/images/asfdcasdf-scaled-1-1536x1024-1.jpg",
   },
 
   {
     title: "Editorially",
-    link: "https://editorially.org",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+    link: "/services/digital-marketing",
+    thumbnail: "/images/asfdfdsaq-scaled-1-1536x1024-1.jpg",
   },
   {
     title: "Editrix AI",
-    link: "https://editrix.ai",
+    link: "/services/custom-development/automation",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+      "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
   },
   {
     title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
+    link: "/services/customer-support/appointment-setting",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+      "/images/business-meeting-and-teamwork-by-business-people-REGXPAZ.jpg",
   },
 
   {
     title: "Algochurn",
-    link: "https://algochurn.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+    link: "/services/digital-marketing/app-store-optimization-and-marketing",
+    thumbnail: "/images/business-meeting-in-modern-conference-room.jpg",
   },
   {
     title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
+    link: "/services/custom-development/crm-development",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+      "/images/creative-business-people-working-on-business-project-1536x1024-1.jpg",
   },
   {
     title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+    link: "/services/customer-support/chat-support",
+    thumbnail: "/images/dsadsadsadas-scaled-1-1536x1024-1.jpg",
   },
   {
     title: "SmartBridge",
-    link: "https://smartbridgetech.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+    link: "/services/digital-marketing/content-writing-and-marketing",
+    thumbnail: "/images/fdsacvfgd-scaled-1-1536x1024-1.jpg",
   },
   {
     title: "Renderwork Studio",
-    link: "https://renderwork.studio",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+    link: "/services/custom-development/customization",
+    thumbnail: "/images/fsadggfdsz-scaled-1-1536x1024-1.jpg",
   },
 
   {
     title: "Creme Digital",
-    link: "https://cremedigital.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+    link: "services/customer-support/crm-support",
+    thumbnail: "/images/managers-analyzing-reports-1536x1024-1.jpg",
   },
   {
     title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+    link: "/services/digital-marketing/conversion-rate-optimization",
+    thumbnail: "/images/Mockup-3.jpg",
   },
   {
     title: "Invoker Labs",
-    link: "https://invoker.lol",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+    link: "/services/custom-development/web-development",
+    thumbnail: "/images",
   },
   {
     title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
+    link: "/services/customer-support/chat-support",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+      "/images/business-meeting-and-teamwork-by-business-people-REGXPAZ.jpg",
   },
 ];

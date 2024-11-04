@@ -9,8 +9,9 @@ import { RiCustomerService2Fill, RiTeamFill } from "react-icons/ri";
 function AboutUsPage({ showHeroSection = true }) {
   return (
     <div className="bg-base-200">
-
-      {showHeroSection && <ImagesSliderShower title="About Us" pageName="About Us" />}
+      {showHeroSection && (
+        <ImagesSliderShower title="About Us" pageName="About Us" />
+      )}
 
       {/* about us  */}
       <div className="min-h-[70vh] grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-x-10  p-10">
@@ -21,19 +22,23 @@ function AboutUsPage({ showHeroSection = true }) {
             About Us
           </span>
 
-          <h1 data-aos="fade-down" className="mt-10 text-lg md:text-3xl font-semibold">
-            Our Passion Is To Work, Build, and Grow Businesses through Local
-            Leads Generation
+          <h1
+            data-aos="fade-down"
+            className="mt-10 text-lg md:text-3xl font-semibold"
+          >
+            We are Where People Generate Millions in Collaboration
           </h1>
 
           <p
             data-aos="fade-up"
             className="mt-5 text-md text-opacity-85 text-justify font_barlow"
           >
-            Local Leads Generation (LLG) is a global cooperation that delivers
-            perfection in IT, Business Consulting, and Outsourcing Services. We
-            are a company of highly qualified minds with years of professional
-            experience and expertise.
+            Rank BPO is a top-ranked digital marketing agency, expertly
+            maximizing the income streams of our customers within Pakistan and
+            throughout the globe. We help our customers by targeting their
+            business audience and converting them into returning customers. Do
+            you, too, want to grow your business? No biggie! We can transform
+            your small-scale business into a multi-million-dollar company!
           </p>
         </div>
 
@@ -161,7 +166,10 @@ function AboutUsPage({ showHeroSection = true }) {
             Testimonials
           </span>
 
-          <h1 data-aos="fade-down" className="mt-10 text-white text-3xl font-semibold">
+          <h1
+            data-aos="fade-down"
+            className="mt-10 text-white text-3xl font-semibold"
+          >
             What Clients Say About Our Service?
           </h1>
         </div>
@@ -170,7 +178,6 @@ function AboutUsPage({ showHeroSection = true }) {
           <TestimonialCarousel />
         </div>
       </div>
-
     </div>
   );
 }
