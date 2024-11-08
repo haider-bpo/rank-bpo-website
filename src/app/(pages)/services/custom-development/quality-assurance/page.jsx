@@ -1,8 +1,8 @@
-import { ImagesSliderShower } from '@/components/shared/ImagesSliderShower';
-import MediaPlayer from '@/components/shared/MediaPlayer';
-import React from 'react'
+import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
+import MediaPlayer from "@/components/shared/MediaPlayer";
+import React from "react";
 
-function QualityAssurance({showHeroSection=true}) {
+function QualityAssurance({ showHeroSection = true }) {
   return (
     <>
       {/* hero section  */}
@@ -20,44 +20,51 @@ function QualityAssurance({showHeroSection=true}) {
         {/* right side  */}
         <div className="text-white/80 p-10" data-aos="fade-left">
           <span className="inline-block mt-5 text-2xl uppercase border-b-4 border-blue-600">
-            About Service
+            Quality Assurance
           </span>
 
           <h1
             data-aos="fade-down"
             className="mt-10 text-xl md:text-3xl font-extrabold"
           >
-            Custom Development Services
+            Elevate Standards with Our Careful Quality Assurance Expertise
           </h1>
 
           <p
             data-aos="fade-up"
             className="mt-2 text-lg text-opacity-85 font_barlow text-justify custom_font"
           >
-            A few years ago, when custom development services were not as
-            critical as they are now, companies didn&apos;t always need close
-            collaboration between their development teams and other departments.
-            However, today, success in the business world is harder to achieve
-            without a cohesive effort from all areas, particularly custom
-            development and business strategy. This is because the tools and
-            platforms that companies use to enhance their operations often
-            require tailored solutions that meet their specific needs and
-            objectives. One of the biggest opportunities a company can
-            capitalize on today is the use of custom development services to
-            improve business processes, provide personalized customer
-            experiences, and optimize their digital infrastructure. Businesses
-            now rely heavily on software and applications to interact with
-            customers, manage workflows, and deliver their products and services
-            efficiently. Custom development enables companies to build unique,
-            purpose-driven solutions that align perfectly with their operations.
-            In fact, the platforms that customers engage with—whether it&apos;s
-            websites, apps, or other digital services—often require specific
-            features that off-the-shelf solutions cannot provide.
+            Rank BPO PVT LTD believes that success is built on quality. Our
+            quality assurance services guarantee that your products and
+            solutions conform to the highest standards prior to market release.
+            We apply a thorough QA plan customized to meet your exact
+            requirements, starting from the initial testing stages up to the
+            final rollout.
+          </p>
+          <p
+            data-aos="fade-up"
+            className="mt-2 text-lg text-opacity-85 font_barlow text-justify custom_font"
+          >
+            Our team uses the latest methods and tools for thorough testing,
+            detecting, and solving possible problems at the beginning of the
+            development phase. Regarding software, applications, or web
+            solutions, our main priorities are functionality, performance,
+            security, and user experience.
+          </p>
+          <p
+            data-aos="fade-up"
+            className="mt-2 text-lg text-opacity-85 font_barlow text-justify custom_font"
+          >
+            Committed to excellence, we guarantee that the final product will
+            meet and exceed all expectations. Our quality assurance procedures
+            lower expenses, decrease risks and improve overall satisfaction.
+            Collaborate with us to incorporate quality assurance into your
+            operations and set your business apart in a competitive market.
           </p>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default QualityAssurance
+export default QualityAssurance;

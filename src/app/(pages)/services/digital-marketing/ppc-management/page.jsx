@@ -1,8 +1,8 @@
-import { ImagesSliderShower } from '@/components/shared/ImagesSliderShower';
-import MediaPlayer from '@/components/shared/MediaPlayer';
-import React from 'react'
+import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
+import MediaPlayer from "@/components/shared/MediaPlayer";
+import React from "react";
 
-function PpcManagement({showHeroSection=true}) {
+function PpcManagement({ showHeroSection = true }) {
   return (
     <>
       {/* hero section  */}
@@ -20,44 +20,51 @@ function PpcManagement({showHeroSection=true}) {
         {/* right side  */}
         <div className="text-white/80 p-10" data-aos="fade-left">
           <span className="inline-block mt-5 text-2xl uppercase border-b-4 border-blue-600">
-            About Service
+            PPC (Pay Per Click) Management
           </span>
 
           <h1
             data-aos="fade-down"
             className="mt-10 text-xl md:text-3xl font-extrabold"
           >
-            Custom Development Services
+            Turn Clicks into Customers with Expert PPC Management
           </h1>
 
           <p
             data-aos="fade-up"
             className="mt-2 text-lg text-opacity-85 font_barlow text-justify custom_font"
           >
-            A few years ago, when custom development services were not as
-            critical as they are now, companies didn&apos;t always need close
-            collaboration between their development teams and other departments.
-            However, today, success in the business world is harder to achieve
-            without a cohesive effort from all areas, particularly custom
-            development and business strategy. This is because the tools and
-            platforms that companies use to enhance their operations often
-            require tailored solutions that meet their specific needs and
-            objectives. One of the biggest opportunities a company can
-            capitalize on today is the use of custom development services to
-            improve business processes, provide personalized customer
-            experiences, and optimize their digital infrastructure. Businesses
-            now rely heavily on software and applications to interact with
-            customers, manage workflows, and deliver their products and services
-            efficiently. Custom development enables companies to build unique,
-            purpose-driven solutions that align perfectly with their operations.
-            In fact, the platforms that customers engage with—whether it&apos;s
-            websites, apps, or other digital services—often require specific
-            features that off-the-shelf solutions cannot provide.
+            Our PPC Management services aim to optimize your advertising budget
+            and provide meaningful effects. Through our strategic method for
+            managing pay-per-click (PPC) campaigns, we guarantee that your
+            advertisements are displayed to the appropriate audience at the
+            optimal time. We enhance your ads for increased click-through rates
+            and improved conversion results on several platforms like Facebook
+            Ads, Google Ads, Bing Ads, Tiktok Ads, and more.
+          </p>
+          <p
+            data-aos="fade-up"
+            className="mt-2 text-lg text-opacity-85 font_barlow text-justify custom_font"
+          >
+            From extensively researching keywords to creating engaging ad
+            content and consistently monitoring performance, we guarantee that
+            each campaign delivers tangible ROI. Our objective is to convert
+            clicks into clients, aiding in the efficient expansion of your
+            business. With our in-depth analytics and clear reporting, youll
+            constantly know how your campaigns are doing.
+          </p>
+          <p
+            data-aos="fade-up"
+            className="mt-2 text-lg text-opacity-85 font_barlow text-justify custom_font"
+          >
+            We will assist you in boosting visibility and expanding with
+            professionally handled PPC campaigns. Trust us and get ready to see
+            results like you never have seen before.
           </p>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default PpcManagement
+export default PpcManagement;

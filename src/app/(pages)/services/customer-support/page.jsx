@@ -9,7 +9,7 @@ const services = [
     image: "/images/business-meeting-in-modern-conference-room.jpg",
     title: "Appointment Setting",
     description:
-      "Welcome to Rank BPO, your one-stop solution for premium digital services. We are a team of experienced...",
+      "Boost your sales pipeline with efficient appointment-setting services, ensuring you secure more meetings and opportunities with greater efficiency.",
     url: "/services/customer-support/appointment-setting",
   },
   {
@@ -17,7 +17,7 @@ const services = [
       "/images/creative-business-people-working-on-business-project-1536x1024-1.jpg",
     title: "Chat Support",
     description:
-      "CRYSTAL SERUM CERAMIC COATING provides a Supreme Hard Protection, Scratch & Swirls Resistant. This Coating Provides...",
+      "Enhance customer engagement through real-time chat support, delivering instant replies and personalized service.",
     url: "/services/customer-support/chat-support",
   },
   {
@@ -25,14 +25,14 @@ const services = [
       "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
     title: "CRM Support",
     description:
-      "LEATHER GUARD COATING is made out of nanotechnology and is a Super Hydro-Phobic Coating that Protects, Leather...",
+      "Maximize customer relationship management with our expert support, helping you simplify communications and boost customer satisfaction.",
     url: "/services/customer-support/crm-support",
   },
   {
     image: "/images/business-meeting-in-modern-conference-room.jpg",
     title: "Email Support",
     description:
-      "Welcome to Rank BPO, your one-stop solution for premium digital services. We are a team of experienced...",
+      "Ensure prompt and professional customer service with organized email support, efficiently addressing inquiries and resolving issues.",
     url: "/services/customer-support/email-support",
   },
   {
@@ -40,7 +40,7 @@ const services = [
       "/images/creative-business-people-working-on-business-project-1536x1024-1.jpg",
     title: "Front Desk",
     description:
-      "CRYSTAL SERUM CERAMIC COATING provides a Supreme Hard Protection, Scratch & Swirls Resistant. This Coating Provides...",
+      "Create a strong first impression with our virtual front desk services, managing customer communications and appointments professionally.",
     url: "/services/customer-support/front-desk",
   },
   {
@@ -48,7 +48,7 @@ const services = [
       "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
     title: "Virtual Assistant",
     description:
-      "LEATHER GUARD COATING is made out of nanotechnology and is a Super Hydro-Phobic Coating that Protects, Leather...",
+      "Boost efficiency and create more time by utilizing our virtual assistants to handle assignments, customer queries, and administrative tasks.",
     url: "/services/customer-support/virtual-assistant",
   },
   {
@@ -56,7 +56,7 @@ const services = [
       "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
     title: "Virtual Order Taker",
     description:
-      "LEATHER GUARD COATING is made out of nanotechnology and is a Super Hydro-Phobic Coating that Protects, Leather...",
+      "Simplify your order management process with our virtual order takers, handling transactions accurately and enhancing customer satisfaction.",
     url: "/services/customer-support/virtual-order-taker",
   },
 ];
@@ -78,40 +78,49 @@ function CustomerSupportPage({ showHeroSection = true }) {
         {/* right side  */}
         <div className="text-white/80 p-10">
           <span className="inline-block mt-5 text-2xl uppercase border-b-4 border-blue-600">
-            About Service
+            Customer Support
           </span>
 
           <h1
             data-aos="fade-down"
             className="mt-10 text-xl md:text-3xl font-extrabold"
           >
-            Customer Support Services
+            Build Stronger Relationships with Dedicated Customer Support
           </h1>
 
           <p
             data-aos="fade-up"
             className="mt-2 text-lg text-opacity-85 font_barlow text-justify"
           >
-            A few years ago, when digital marketing was not as big as it is now,
-            there was no need for a company&apos;s marketing department and
-            their customer support to work together. However, today a company
-            cannot become so successful unless both these departments work hand
-            in hand. This is primarily because the channel where the company
-            will market is often the same channel that their customers turn to
-            if they have concerns and issues with the company&apos;s products
-            and services. One of the biggest digital channels a company can use
-            to build brand reputation and promote its products and services is
-            social media. Social media platforms have huge traffic and it is
-            only right for businesses to use this huge amount of traffic to
-            market their services. In fact, these platforms are also where
-            customers prefer and spend most of their time. Communication on
-            social media is almost instantaneous and there is nothing better
-            than when you need to send a message to a business and get an
-            instant response. What does it mean? This means that social media is
-            both a marketing and customer service tool. Ultimately, marketing
-            and customer support will use the same channels to manage their
-            business operations. With this in mind, it has become a requirement
-            that these two departments work together to create a con
+            At Rank BPO PVT LTD, we believe that providing excellent customer
+            support is crucial for creating lasting connections with your
+            customers. Our wide range of services is constructed to cater to
+            your companys various requirements, guaranteeing that your customers
+            get prompt and efficient support. We provide chat support for
+            immediate interaction, enabling your clients to reach us instantly.
+            Our email support system offers a professional and structured
+            approach to managing inquiries and feedback, leading to improved
+            customer satisfaction.
+          </p>
+          <p
+            data-aos="fade-up"
+            className="mt-2 text-lg text-opacity-85 font_barlow text-justify"
+          >
+            Furthermore, our CRM support guarantees that your customer
+            relationship management procedures are smooth and effective. Our
+            focus is on appointment setting and simplifying your scheduling
+            requirements, while our virtual assistant services offer flexible
+            help with different administrative duties. Our front desk services
+            improve your professional image, while our virtual order-taker
+            solutions aid in smooth transaction processes.
+          </p>
+          <p
+            data-aos="fade-up"
+            className="mt-2 text-lg text-opacity-85 font_barlow text-justify"
+          >
+            All of our customer support services will exceed your expectations.
+            Allow Rank BPO PVT LTD to enhance your customer service experience
+            and guarantee that your customers feel appreciated and supported.
           </p>
         </div>
       </div>

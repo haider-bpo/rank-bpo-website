@@ -1,12 +1,14 @@
-import { ImagesSliderShower } from '@/components/shared/ImagesSliderShower';
-import MediaPlayer from '@/components/shared/MediaPlayer';
-import React from 'react'
+import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
+import MediaPlayer from "@/components/shared/MediaPlayer";
+import React from "react";
 
-function SearchEngineMarketing({showHeroSection=true}) {
+function SearchEngineMarketing({ showHeroSection = true }) {
   return (
     <>
       {/* hero section  */}
-      {showHeroSection && <ImagesSliderShower title={"search engine marketing"} />}
+      {showHeroSection && (
+        <ImagesSliderShower title={"search engine marketing"} />
+      )}
 
       <div className="min-h-[70vh] p-10 grid grid-cols-1 md:grid-cols-[1fr_1fr]">
         {/* left side  */}
@@ -20,44 +22,52 @@ function SearchEngineMarketing({showHeroSection=true}) {
         {/* right side  */}
         <div className="text-white/80 p-10" data-aos="fade-left">
           <span className="inline-block mt-5 text-2xl uppercase border-b-4 border-blue-600">
-            About Service
+            Search Engine Marketing
           </span>
 
           <h1
             data-aos="fade-down"
             className="mt-10 text-xl md:text-3xl font-extrabold"
           >
-            Custom Development Services
+            Turn Clicks into Customers with Effective Search Engine Marketing
           </h1>
 
           <p
             data-aos="fade-up"
             className="mt-2 text-lg text-opacity-85 font_barlow text-justify custom_font"
           >
-            A few years ago, when custom development services were not as
-            critical as they are now, companies didn&apos;t always need close
-            collaboration between their development teams and other departments.
-            However, today, success in the business world is harder to achieve
-            without a cohesive effort from all areas, particularly custom
-            development and business strategy. This is because the tools and
-            platforms that companies use to enhance their operations often
-            require tailored solutions that meet their specific needs and
-            objectives. One of the biggest opportunities a company can
-            capitalize on today is the use of custom development services to
-            improve business processes, provide personalized customer
-            experiences, and optimize their digital infrastructure. Businesses
-            now rely heavily on software and applications to interact with
-            customers, manage workflows, and deliver their products and services
-            efficiently. Custom development enables companies to build unique,
-            purpose-driven solutions that align perfectly with their operations.
-            In fact, the platforms that customers engage with—whether it&apos;s
-            websites, apps, or other digital services—often require specific
-            features that off-the-shelf solutions cannot provide.
+            Promote your business in search engine results, bringing in more
+            traffic and boosting conversions. We offer search engine marketing
+            strategies that are better than the best. By combining strategic
+            campaigns with precise search engine marketing tactics, we assist
+            you. Reaching your target audience when they are looking for your
+            products or services is achievable now
+          </p>
+          <p
+            data-aos="fade-up"
+            className="mt-2 text-lg text-opacity-85 font_barlow text-justify custom_font"
+          >
+            Our main goal is to optimize your ad investment for the best return
+            on investment (ROI) while providing concrete results. Our SEM
+            strategies are customized for your business goals, covering keyword
+            research, campaign management, and performance analysis. Whether
+            your goal is to drive more traffic to your website, generate
+            potential customer leads, or enhance sales, we develop effective
+            advertising campaigns that make a significant difference.
+          </p>
+          <p
+            data-aos="fade-up"
+            className="mt-2 text-lg text-opacity-85 font_barlow text-justify custom_font"
+          >
+            We have a proven track record of exceeding the expectations of our
+            customers and going beyond. Allow us to improve your online
+            visibility and achieve significant results that are better than the
+            best through our skilled SEM services.
           </p>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default SearchEngineMarketing
+export default SearchEngineMarketing;

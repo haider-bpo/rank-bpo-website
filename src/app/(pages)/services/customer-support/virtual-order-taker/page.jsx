@@ -20,39 +20,45 @@ function VirtualOrderTaker({ showHeroSection = true }) {
         {/* right side  */}
         <div className="text-white/80 p-10" data-aos="fade-left">
           <span className="inline-block mt-5 text-2xl uppercase border-b-4 border-blue-600">
-            About Service
+            Virtual Order Taker
           </span>
 
           <h1
             data-aos="fade-down"
             className="mt-10 text-xl md:text-3xl font-extrabold"
           >
-            Custom Development Services
+            Effortless Order Management with Our Virtual Order Takers
           </h1>
 
           <p
             data-aos="fade-up"
             className="mt-2 text-lg text-opacity-85 font_barlow text-justify custom_font"
           >
-            A few years ago, when custom development services were not as
-            critical as they are now, companies didn&apos;t always need close
-            collaboration between their development teams and other departments.
-            However, today, success in the business world is harder to achieve
-            without a cohesive effort from all areas, particularly custom
-            development and business strategy. This is because the tools and
-            platforms that companies use to enhance their operations often
-            require tailored solutions that meet their specific needs and
-            objectives. One of the biggest opportunities a company can
-            capitalize on today is the use of custom development services to
-            improve business processes, provide personalized customer
-            experiences, and optimize their digital infrastructure. Businesses
-            now rely heavily on software and applications to interact with
-            customers, manage workflows, and deliver their products and services
-            efficiently. Custom development enables companies to build unique,
-            purpose-driven solutions that align perfectly with their operations.
-            In fact, the platforms that customers engage with—whether it&apos;s
-            websites, apps, or other digital services—often require specific
-            features that off-the-shelf solutions cannot provide.
+            We offer virtual order-taker services that aim to simplify your
+            order management process and improve customer satisfaction. Our
+            experienced virtual order takers seamlessly manage customer orders
+            with professionalism to ensure smooth transaction processing, acting
+            as an extension of your business. Rank BPO PVT LTD makes sure no
+            customer is left unnoticed, and no order is ignored.
+          </p>
+          <p
+            data-aos="fade-up"
+            className="mt-2 text-lg text-opacity-85 font_barlow text-justify custom_font"
+          >
+            Our team is committed to delivering excellent service that aligns
+            with the values of your brand, whether it is through phone orders,
+            online requests, or email confirmations. We guarantee precision in
+            processing orders, decreasing error chances and improving overall
+            customer satisfaction.
+          </p>
+          <p
+            data-aos="fade-up"
+            className="mt-2 text-lg text-opacity-85 font_barlow text-justify custom_font"
+          >
+            By delegating your order-taking requirements to us, you can dedicate
+            more time and resources to your main business tasks. Partnering with
+            us guarantees your customers receive prompt and dependable service,
+            resulting in higher loyalty and repeated business.
           </p>
         </div>
       </div>

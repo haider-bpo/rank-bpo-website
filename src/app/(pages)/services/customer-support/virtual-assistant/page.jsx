@@ -1,15 +1,12 @@
-import { ImagesSliderShower } from '@/components/shared/ImagesSliderShower';
-import MediaPlayer from '@/components/shared/MediaPlayer';
-import React from 'react'
+import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
+import MediaPlayer from "@/components/shared/MediaPlayer";
+import React from "react";
 
 function VirtualAssistant({ showHeroSection = true }) {
   return (
     <>
-
       {/* hero section  */}
-      {showHeroSection && (
-        <ImagesSliderShower title={"virtual assistant"} />
-      )}
+      {showHeroSection && <ImagesSliderShower title={"virtual assistant"} />}
 
       <div className="min-h-[70vh] p-10 grid grid-cols-1 md:grid-cols-[1fr_1fr]">
         {/* left side  */}
@@ -23,44 +20,51 @@ function VirtualAssistant({ showHeroSection = true }) {
         {/* right side  */}
         <div className="text-white/80 p-10" data-aos="fade-left">
           <span className="inline-block mt-5 text-2xl uppercase border-b-4 border-blue-600">
-            About Service
+            Virtual Assistant
           </span>
 
           <h1
             data-aos="fade-down"
             className="mt-10 text-xl md:text-3xl font-extrabold"
           >
-            Custom Development Services
+            Seamless Customer Assistance from Our Expert Virtual Team
           </h1>
 
           <p
             data-aos="fade-up"
             className="mt-2 text-lg text-opacity-85 font_barlow text-justify custom_font"
           >
-            A few years ago, when custom development services were not as
-            critical as they are now, companies didn&apos;t always need close
-            collaboration between their development teams and other departments.
-            However, today, success in the business world is harder to achieve
-            without a cohesive effort from all areas, particularly custom
-            development and business strategy. This is because the tools and
-            platforms that companies use to enhance their operations often
-            require tailored solutions that meet their specific needs and
-            objectives. One of the biggest opportunities a company can
-            capitalize on today is the use of custom development services to
-            improve business processes, provide personalized customer
-            experiences, and optimize their digital infrastructure. Businesses
-            now rely heavily on software and applications to interact with
-            customers, manage workflows, and deliver their products and services
-            efficiently. Custom development enables companies to build unique,
-            purpose-driven solutions that align perfectly with their operations.
-            In fact, the platforms that customers engage with—whether it&apos;s
-            websites, apps, or other digital services—often require specific
-            features that off-the-shelf solutions cannot provide.
+            Need someone to manage for you? Our virtual assistant services
+            strengthen your business by offering specialized support that
+            improves your customer engagement. Our capable virtual assistants
+            act as an expansion of your team, interacting with your clients for
+            you and guaranteeing they get timely and professional help.
+          </p>
+          <p
+            data-aos="fade-up"
+            className="mt-2 text-lg text-opacity-85 font_barlow text-justify custom_font"
+          >
+            Our virtual assistants are prepared to uphold your brands image with
+            the highest level of professionalism and attention to detail.
+            Whether we are handling inquiries, booking appointments, or sharing
+            product details. We enhance customer satisfaction and foster trust
+            and loyalty within your customer base.
+          </p>
+          <p
+            data-aos="fade-up"
+            className="mt-2 text-lg text-opacity-85 font_barlow text-justify custom_font"
+          >
+            You can dedicate your time to strategic projects and expansion by
+            assigning us these crucial responsibilities. Our digital assistants
+            smoothly blend into your work processes, enabling you to uphold
+            top-notch service without needing extra personnel. Allow Rank BPO
+            PVT LTD to improve your customer support through our specialized
+            virtual assistant services, advancing your business success.
           </p>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default VirtualAssistant
+export default VirtualAssistant;

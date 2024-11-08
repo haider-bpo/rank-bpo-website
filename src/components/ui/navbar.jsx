@@ -89,7 +89,7 @@ const menu = [
         subItems: [
           {
             name: "Search Engine Marketing",
-            href: "/services/digital-marketing/search-engine-optimization",
+            href: "/services/digital-marketing/search-engine-marketing",
             icon: <RiSeoLine className="h-4 w-4" />,
           },
           {

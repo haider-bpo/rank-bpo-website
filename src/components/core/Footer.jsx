@@ -76,9 +76,7 @@ function Footer() {
           </div>
 
           <p className="text-justify">
-            Rank BPO PVT LTD ensures your business thrives with a powerful
-            combination of unmatched IT services and a dedicated commitment to
-            outsourcing. We believe in cooking success together.
+          Rank BPO is a top-ranked digital marketing agency, expertly maximizing the income streams of our customers within Pakistan and throughout the globe. In our hands lies the power to grow your business!
           </p>
 
           {/* social media link  */}

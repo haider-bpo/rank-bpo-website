@@ -10,23 +10,23 @@ import {
 
 const testimonials = [
   {
-    username: "Olivia G.",
+    username: "Jawad Saleem",
     comment:
-      "I totally recommend these guys because of their work ethic and premium services. The team is so polite and knowledgeable.",
+      "Rank BPO is a professional digital marketing agency based in Lahore, Pakistan. They helped me market my product through Facebook and Google Ads in Karachi, Lahore, and Islamabad. ",
   },
   {
-    username: "John Lark",
+    username: "Jibran Aslam ",
     comment:
-      "I have been using Rank BPO services for a year now. I am quite impressed by their work and professionalism of the team.",
+      "Professional SEOs! I am getting consistent rankings after I gave them the SEO project of my business website. My web organic traffic is cumulative every day. ",
   },
   {
-    username: "Jennifer L.",
+    username: "Zahid Shahzad",
     comment:
-      "Rank BPO services is the best services service provider in Orange County California. I am totally in love with the result.",
+      "I have worked with Rank BPO on several projects previously. Right now, my two websites are under contract with the SEO department, and the rankings are constantly getting better. ",
   },
   {
-    username: "Bob Brown",
-    comment: "A great experience overall. Will definitely come again.",
+    username: "Sidra Ghaffar",
+    comment: "As far as local social marketing agencies in Pakistan are concerned, Rank BPO stands at the top.  Thank you for managing our social media pages. ",
   },
 ];
 

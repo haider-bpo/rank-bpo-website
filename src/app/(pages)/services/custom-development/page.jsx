@@ -9,7 +9,7 @@ const services = [
     image: "/images/business-meeting-in-modern-conference-room.jpg",
     title: "Web Development",
     description:
-      "Welcome to Rank BPO, your one-stop solution for premium digital services. We are a team of experienced...",
+      "Creating dynamic, highly responsive websites that actively engage users and optimize performance across all devices.",
     url: "/services/custom-development/web-development",
   },
   {
@@ -17,7 +17,7 @@ const services = [
       "/images/creative-business-people-working-on-business-project-1536x1024-1.jpg",
     title: "Mobile Development",
     description:
-      "CRYSTAL SERUM CERAMIC COATING provides a Supreme Hard Protection, Scratch & Swirls Resistant. This Coating Provides...",
+      "Developing innovative mobile applications that provide seamless user experiences across iOS and Android platforms",
     url: "/services/custom-development/mobile-development",
   },
   {
@@ -25,14 +25,14 @@ const services = [
       "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
     title: "CRM Development",
     description:
-      "LEATHER GUARD COATING is made out of nanotechnology and is a Super Hydro-Phobic Coating that Protects, Leather...",
+      "Making custom CRM systems to streamline customer data, improve interaction tracking, and boost client relationships.",
     url: "/services/custom-development/crm-development",
   },
   {
     image: "/images/business-meeting-in-modern-conference-room.jpg",
     title: "Quality Assurance",
     description:
-      "Welcome to Rank BPO, your one-stop solution for premium digital services. We are a team of experienced...",
+      "Ensure perfect performance and functionality with rigorous quality assurance testing tailored to your exact needs.",
     url: "/services/custom-development/quality-assurance",
   },
   {
@@ -40,7 +40,7 @@ const services = [
       "/images/creative-business-people-working-on-business-project-1536x1024-1.jpg",
     title: "Automation",
     description:
-      "CRYSTAL SERUM CERAMIC COATING provides a Supreme Hard Protection, Scratch & Swirls Resistant. This Coating Provides...",
+      "Increase productivity by automating several repetitive tasks and optimizing workflows with custom automation solutions.",
     url: "/services/custom-development/automation",
   },
   {
@@ -48,7 +48,7 @@ const services = [
       "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
     title: "Customization",
     description:
-      "LEATHER GUARD COATING is made out of nanotechnology and is a Super Hydro-Phobic Coating that Protects, Leather...",
+      "Modify and enhance existing software or websites to better align with your unique business processes and operational goals.",
     url: "/services/custom-development/customization",
   },
 ];
@@ -73,39 +73,46 @@ function CustomDevelopmentPage({ showHeroSection = true }) {
         {/* right side  */}
         <div className="text-white/80 p-10" data-aos="fade-left">
           <span className="inline-block mt-5 text-2xl uppercase border-b-4 border-blue-600">
-            About Service
+            Custom Development Services
           </span>
 
           <h1
             data-aos="fade-down"
             className="mt-10 text-xl md:text-3xl font-extrabold"
           >
-            Custom Development Services
+            Innovative Custom Solutions Tailored to Fit Your Business Needs
           </h1>
 
           <p
             data-aos="fade-up"
             className="mt-2 text-lg text-opacity-85 text-justify custom_font"
           >
-            A few years ago, when custom development services were not as
-            critical as they are now, companies didn&apos;t always need close
-            collaboration between their development teams and other departments.
-            However, today, success in the business world is harder to achieve
-            without a cohesive effort from all areas, particularly custom
-            development and business strategy. This is because the tools and
-            platforms that companies use to enhance their operations often
-            require tailored solutions that meet their specific needs and
-            objectives. One of the biggest opportunities a company can
-            capitalize on today is the use of custom development services to
-            improve business processes, provide personalized customer
-            experiences, and optimize their digital infrastructure. Businesses
-            now rely heavily on software and applications to interact with
-            customers, manage workflows, and deliver their products and services
-            efficiently. Custom development enables companies to build unique,
-            purpose-driven solutions that align perfectly with their operations.
-            In fact, the platforms that customers engage with—whether it&apos;s
-            websites, apps, or other digital services—often require specific
-            features that off-the-shelf solutions cannot provide.
+            At Rank BPO PVT LTD, we dive deep into the world of custom
+            development, offering solutions that truly reflect the unique vision
+            of your business. Our web development team can craft dynamic
+            websites that are not just visually stunning but also super
+            responsive and user-friendly. When it comes to mobile development,
+            we ensure your applications shine across all devices, enhancing user
+            engagement.
+          </p>
+          <p
+            data-aos="fade-up"
+            className="mt-2 text-lg text-opacity-85 text-justify custom_font"
+          >
+            But we don’t just stop there. Our CRM development services empower
+            you to manage customer relationships like never before. Quality
+            assurance? It’s very important! In our custom development approach,
+            every project undergoes rigorous testing to guarantee excellence.
+          </p>
+          <p
+            data-aos="fade-up"
+            className="mt-2 text-lg text-opacity-85 text-justify custom_font"
+          >
+            Customization is our motto. Whether its tailoring features to meet
+            your specific needs or integrating automation to streamline
+            workflows, we are here to innovate. Get ready to turn your concepts
+            into reality. Elevate your business and drive success with our
+            comprehensive custom development services.
           </p>
         </div>
       </div>

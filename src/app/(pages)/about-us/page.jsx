@@ -53,7 +53,7 @@ function AboutUsPage({ showHeroSection = true }) {
         <div className="flex flex-col justify-center ">
           <div className="flex items-center gap-2 justify-center text-xl">
             <RiCustomerService2Fill className="text-4xl md:text-6xl mt-3" />
-            <NumberAnimation end={22345} suffix={"+"} />
+            <NumberAnimation end={1000} suffix={"+"} />
           </div>
 
           <p className="text-center text-xl text-white">Happy Customers</p>
@@ -83,18 +83,21 @@ function AboutUsPage({ showHeroSection = true }) {
           </span>
 
           <h1 data-aos="fade-down" className="mt-10 text-3xl font-semibold">
-            Business Potential Lies in Human Connection
+            We are Masters in Growing Businesses Digitally!
           </h1>
 
           <p
             data-aos="fade-up"
             className="mt-5 text-md text-opacity-85 text-justify font_barlow"
           >
-            Local Leads Generation is committed to delivering lasting value to
-            our clients. We wield technology and effectuate staunch practices to
-            deliver a range of cut-above, cost-effective information technology
-            results from global locations that enable customers to achieve their
-            business goals.
+            Rank BPO is a team of qualified and experienced marketers who
+            possess a vision. We don’t encourage a single revenue stream but
+            help our customers with strategic revenue operations. Our aim is to
+            revolutionize the marketing industry by offering reliable digital
+            solutions in the information age. We have technical managers, SEO
+            executives, customer support professionals, copywriters, graphic
+            designers, and other experts to make sprints on your business
+            strategy and lead the dedicated role assigned to them.
           </p>
         </div>
       </div>
@@ -170,7 +173,7 @@ function AboutUsPage({ showHeroSection = true }) {
             data-aos="fade-down"
             className="mt-10 text-white text-3xl font-semibold"
           >
-            What Clients Say About Our Service?
+           This is What Our Partners Say
           </h1>
         </div>
 

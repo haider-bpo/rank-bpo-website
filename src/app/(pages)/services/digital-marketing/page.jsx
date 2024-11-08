@@ -1,15 +1,15 @@
-import { ImagesSliderShower } from '@/components/shared/ImagesSliderShower';
-import MediaPlayer from '@/components/shared/MediaPlayer';
-import ServiceCard from '@/components/shared/ServiceCard';
-import Link from 'next/link';
-import React from 'react'
+import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
+import MediaPlayer from "@/components/shared/MediaPlayer";
+import ServiceCard from "@/components/shared/ServiceCard";
+import Link from "next/link";
+import React from "react";
 
 const services = [
   {
     image: "/images/business-meeting-in-modern-conference-room.jpg",
     title: "App Store Optimization",
     description:
-      "Welcome to Rank BPO, your one-stop solution for premium digital services. We are a team of experienced...",
+      "Boost the visibility and number of downloads of your apps with customized optimization and marketing to achieve success.",
     url: "/services/digital-marketing/app-store-optimization-and-marketing",
   },
   {
@@ -17,7 +17,7 @@ const services = [
       "/images/creative-business-people-working-on-business-project-1536x1024-1.jpg",
     title: "content writing and Marketing",
     description:
-      "CRYSTAL SERUM CERAMIC COATING provides a Supreme Hard Protection, Scratch & Swirls Resistant. This Coating Provides...",
+      "Create compelling content material that connects you with your visitors, building trust and enhancing reputation.",
     url: "/services/digital-marketing/content-writing-and-marketing",
   },
   {
@@ -25,14 +25,14 @@ const services = [
       "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
     title: "conversion rate optimization",
     description:
-      "LEATHER GUARD COATING is made out of nanotechnology and is a Super Hydro-Phobic Coating that Protects, Leather...",
+      "Increase your online advertising effectiveness by utilizing data-driven techniques to convert traffic into paying clients.",
     url: "/services/digital-marketing/conversion-rate-optimization",
   },
   {
     image: "/images/business-meeting-in-modern-conference-room.jpg",
     title: "e commerce marketing",
     description:
-      "Welcome to Rank BPO, your one-stop solution for premium digital services. We are a team of experienced...",
+      "Boost sales and customer loyalty by implementing specific marketing techniques that turn visitors into customers.",
     url: "/services/digital-marketing/e-commerce-marketing",
   },
   {
@@ -40,7 +40,7 @@ const services = [
       "/images/creative-business-people-working-on-business-project-1536x1024-1.jpg",
     title: "marketing strategy",
     description:
-      "CRYSTAL SERUM CERAMIC COATING provides a Supreme Hard Protection, Scratch & Swirls Resistant. This Coating Provides...",
+      "Develop customized marketing plans tailored to fit your unique business image and target audience for highly effective results.",
     url: "/services/digital-marketing/marketing-strategy",
   },
   {
@@ -48,7 +48,7 @@ const services = [
       "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
     title: "ppc management",
     description:
-      "LEATHER GUARD COATING is made out of nanotechnology and is a Super Hydro-Phobic Coating that Protects, Leather...",
+      "Make the most of your advertising budget with amazing PPC management, which gives brilliant results and great ROI.",
     url: "/services/digital-marketing/ppc-management",
   },
   {
@@ -56,7 +56,7 @@ const services = [
       "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
     title: "search engine marketing",
     description:
-      "LEATHER GUARD COATING is made out of nanotechnology and is a Super Hydro-Phobic Coating that Protects, Leather...",
+      "Boost your online visibility on search engines with strategically targeted ads that significantly increase conversion rates",
     url: "/services/digital-marketing/search-engine-marketing",
   },
   {
@@ -64,7 +64,7 @@ const services = [
       "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
     title: "search engine optimization",
     description:
-      "LEATHER GUARD COATING is made out of nanotechnology and is a Super Hydro-Phobic Coating that Protects, Leather...",
+      "Drive organic traffic and improve rankings with expertly crafted SEO strategies that enhance visibility and engagement.",
     url: "/services/digital-marketing/search-engine-optimization",
   },
   {
@@ -72,7 +72,7 @@ const services = [
       "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
     title: "social media marketing",
     description:
-      "LEATHER GUARD COATING is made out of nanotechnology and is a Super Hydro-Phobic Coating that Protects, Leather...",
+      "Capture and increase your audience on social media platforms with personalized content material and targeted advertising techniques.",
     url: "/services/digital-marketing/social-media-marketing",
   },
   {
@@ -80,12 +80,12 @@ const services = [
       "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
     title: "youtube channel",
     description:
-      "LEATHER GUARD COATING is made out of nanotechnology and is a Super Hydro-Phobic Coating that Protects, Leather...",
+      "Grow the presence of your brand with engaging video content and strategic management of your YouTube channel.",
     url: "/services/digital-marketing/youtube-channel",
   },
 ];
 
-function DigitalMarketingPage({showHeroSection=true}) {
+function DigitalMarketingPage({ showHeroSection = true }) {
   return (
     <>
       {/* hero section  */}
@@ -102,44 +102,50 @@ function DigitalMarketingPage({showHeroSection=true}) {
         {/* right side  */}
         <div className="text-white/80 p-10">
           <span className="inline-block mt-5 text-2xl uppercase border-b-4 border-blue-600">
-            About Service
+            Digital Marketing
           </span>
 
           <h1
             data-aos="fade-down"
             className="mt-10 text-xl md:text-3xl font-extrabold"
           >
-            Customer Support Services
+            Tailored Digital Strategies for Maximum Impact and Visibility
           </h1>
 
           <p
             data-aos="fade-up"
             className="mt-2 text-lg text-opacity-85 custom_font text-justify"
           >
-            A few years ago, when digital marketing was not as big as it is now,
-            there was no need for a company&apos;s marketing department and their
-            customer support to work together. However, today a company cannot
-            become so successful unless both these departments work hand in
-            hand. This is primarily because the channel where the company will
-            market is often the same channel that their customers turn to if
-            they have concerns and issues with the company&apos;s products and
-            services. One of the biggest digital channels a company can use to
-            build brand reputation and promote its products and services is
-            social media. Social media platforms have huge traffic and it is
-            only right for businesses to use this huge amount of traffic to
-            market their services. In fact, these platforms are also where
-            customers prefer and spend most of their time. Communication on
-            social media is almost instantaneous and there is nothing better
-            than when you need to send a message to a business and get an
-            instant response. What does it mean? This means that social media is
-            both a marketing and customer service tool. Ultimately, marketing
-            and customer support will use the same channels to manage their
-            business operations. With this in mind, it has become a requirement
-            that these two departments work together to create a con
+            In the present world that prioritizes digital platforms, a robust
+            online presence is crucial for businesses to thrive. At Rank BPO PVT
+            LTD, we provide thorough digital marketing services that aim to
+            enhance your brand and reach your desired audience. Whether you
+            require search engine marketing for better visibility or social
+            media marketing to engage users on various platforms, our strategies
+            are designed to deliver results.
+          </p>
+          <p
+            data-aos="fade-up"
+            className="mt-2 text-lg text-opacity-85 custom_font text-justify"
+          >
+            We have knowledge in various areas, from managing PPC to maximizing
+            advertising budget to optimizing conversion rates to create loyal
+            customers. We also have expertise in e-commerce marketing to help
+            your online store succeed, as well as YouTube marketing to increase
+            video engagement.
+          </p>
+          <p
+            data-aos="fade-up"
+            className="mt-2 text-lg text-opacity-85 custom_font text-justify"
+          >
+            By implementing personalized methods such as content creation,
+            optimizing for app stores, and developing unique marketing tactics,
+            our main goal is to generate campaigns that will expand your
+            company. Collaborate with us to enhance your online presence and
+            stay ahead of competitors.
           </p>
         </div>
       </div>
-
 
       {/* service cards  */}
       {showHeroSection ? (
@@ -193,9 +199,8 @@ function DigitalMarketingPage({showHeroSection=true}) {
           />
         ))}
       </div>
-
     </>
-  )
+  );
 }
 
-export default DigitalMarketingPage
+export default DigitalMarketingPage;
