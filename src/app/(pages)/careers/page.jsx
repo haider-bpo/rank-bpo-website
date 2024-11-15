@@ -1,4 +1,7 @@
 import React from "react";
+import JobNotification from "./JobNotification";
+import JobApplicationForm from "./JobApplicationForm";
+import JobListings from "./JobListings";
 
 const offers = [
   {
@@ -39,9 +42,12 @@ const offers = [
 ];
 
 function CareersPage() {
+  const handleSubscribe = () => {
+    alert("Subscribed!");
+  };
+
   return (
     <>
-
       {/* hero section  */}
       <div>
         <div className="relative bg-black bg-center bg-no-repeat bg-cover h-screen">
@@ -59,7 +65,10 @@ function CareersPage() {
               We&apos;re looking for you!
             </h1>
 
-            <p className="text-blue-600 ps-4 capitalize"> - jobs & internships at Rank</p>
+            <p className="text-blue-600 ps-4 capitalize">
+              {" "}
+              - jobs & internships at Rank
+            </p>
 
             <div
               data-aos="fade-up"
@@ -75,28 +84,39 @@ function CareersPage() {
         </div>
       </div>
 
-      {/* available jobs */}
       <div className="p-10 md:px-28">
+        <JobNotification
+          profileImage="/images/business-meeting-and-teamwork-by-business-people-REGXPAZ.jpg"
+          jobTitle="Frontend Developer"
+          notificationText="Hi, you have received a job for"
+          titleText="Stay Updated with the Latest Job Openings!"
+          descriptionText="Receive notifications about new job opportunities in your field."
+          placeholderText="Enter your email here"
+          // onSubscribe={handleSubscribe}
+        />
+      </div>
+
+      <JobApplicationForm/>
+
+      {/* available jobs */}
+      <div className="p-10 md:px-28 mt-7">
         <p
           data-aos="fade-right"
-          className="text-4xl font-extrabold text-md text-opacity-85 font_barlow text-start"
+          className="text-4xl font-extrabold text-md text-opacity-85 font_barlow text-start uppercase"
         >
-          OUR JOB OFFERS
+          Current Openings
           <div className="w-[40%] md:w-[10%] h-1 rounded-full bg-blue-600 mt-5 ms-1"></div>
         </p>
 
-        <p className=" pt-10">
+        <p className="pt-10">
           Would you like to develop the Internet of tomorrow in a motivated
           team? Are you ambitious and willing to take on responsibility in order
           to advance the further development of Boolmind together with us? Then
           we look forward to receiving your application!
         </p>
 
-        <div className="">
-          <p className="bg-base-300 p-10 rounded-lg my-5">
-            Sorry, there are no job openings available right now.
-          </p>
-        </div>
+      <JobListings/>
+
       </div>
 
       {/* offers */}
