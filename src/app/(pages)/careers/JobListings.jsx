@@ -99,7 +99,7 @@ function JobListings() {
           <AlertCircle className="h-4 w-4" />
           <AlertTitle>No Jobs Available</AlertTitle>
           <AlertDescription>
-            We currently don't have any open positions. Please check back later
+            We currently does not have any open positions. Please check back later
             for new opportunities.
           </AlertDescription>
         </Alert>
