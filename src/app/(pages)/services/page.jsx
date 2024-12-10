@@ -5,28 +5,26 @@ import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
 
 const cardsdetail = [
   {
-    image: "/images/business-meeting-in-modern-conference-room.jpg",
+    image: "/images/services/Custom-Development.jpg",
     title: "Custom Development",
     description:
-      "Welcome to Rank BPO, your one-stop solution for premium digital services. We are a team of experienced...",
+      "Unleash your business potential with Rank BPO's tailored digital solutions. From innovative web development to seamless software integration, our expert team crafts custom applications that drive efficiency and growth.",
     url: "/services/custom-development",
     iconVideoSrc: "/videos/0lVW4c3VGL0RIs9Ad5.mp4",
   },
   {
-    image:
-      "/images/creative-business-people-working-on-business-project-1536x1024-1.jpg",
+    image: "/images/services/Digital-Marketing.jpg",
     title: "Digital Marketing",
     description:
-      "CRYSTAL SERUM CERAMIC COATING provides a Supreme Hard Protection, Scratch & Swirls Resistant. This Coating Provides...",
+      "Elevate your brand with Rank BPO's cutting-edge digital marketing services. Our comprehensive strategies, including SEO, social media marketing, and PPC, are designed to enhance your online presence and maximize your reach.",
     url: "/services/digital-marketing",
     iconVideoSrc: "/videos/K93ci7841DV532yJ8u.mp4",
   },
   {
-    image:
-      "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
+    image: "/images/services/Customer-Support.jpg",
     title: "Customer Support",
     description:
-      "LEATHER GUARD COATING is made out of nanotechnology and is a Super Hydro-Phobic Coating that Protects, Leather...",
+      "Deliver exceptional customer experiences with Rank BPO's top-tier customer support services. Our dedicated team provides prompt, effective assistance through various channels, ensuring high satisfaction and loyalty.",
     url: "/services/customer-support",
     iconVideoSrc: "/videos/1Jnw4Nae2Bg39q.mp4",
   },

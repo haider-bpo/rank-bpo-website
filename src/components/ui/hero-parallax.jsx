@@ -46,7 +46,7 @@ export const HeroParallax = ({ products }) => {
   return (
     <div
       ref={ref}
-      className="h-[310vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[330vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -87,12 +87,11 @@ export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 ">
       <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-        Your venture is just a start <br /> Rank BPO brings digital growth
+        Digital Success Starts Here
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        Does your business attract a small audience on the internet? If yes,
-        Rank BPO can revamp your strategy. Let’s uncover why your digital media
-        channels have failed to generate revenue despite repeated efforts.
+        Struggling to reach the right audience? Rank BPO can redefine your
+        strategy and turn digital challenges into revenue.
       </p>
       <div className="mt-4">
         <TypewriterEffect />

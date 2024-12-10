@@ -13,85 +13,81 @@ export default HeroSection;
 
 export const products = [
   {
-    title: "services",
-    link: "/services",
-    thumbnail: "/images/589-scaled-1-1536x1024-1.jpg",
-  },
-  {
-    title: "Cursor",
+    title: "Custom Development",
     link: "/services/custom-development",
-    thumbnail: "/images/afsdcfgs-scaled-1-1536x1024-1-1.jpg",
+    thumbnail: "/images/services/Custom-Development.jpg",
   },
   {
-    title: "Rogue",
-    link: "/services/customer-support",
-    thumbnail: "/images/asfdcasdf-scaled-1-1536x1024-1.jpg",
-  },
-
-  {
-    title: "Editorially",
+    title: "Digital Marketing",
     link: "/services/digital-marketing",
-    thumbnail: "/images/asfdfdsaq-scaled-1-1536x1024-1.jpg",
+    thumbnail: "/images/services/Digital-Marketing.jpg",
   },
   {
-    title: "Editrix AI",
-    link: "/services/custom-development/automation",
-    thumbnail:
-      "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
-  },
-  {
-    title: "Pixel Perfect",
-    link: "/services/customer-support/appointment-setting",
-    thumbnail:
-      "/images/business-meeting-and-teamwork-by-business-people-REGXPAZ.jpg",
-  },
-
-  {
-    title: "Algochurn",
-    link: "/services/digital-marketing/app-store-optimization-and-marketing",
-    thumbnail: "/images/business-meeting-in-modern-conference-room.jpg",
-  },
-  {
-    title: "Aceternity UI",
-    link: "/services/custom-development/crm-development",
-    thumbnail:
-      "/images/creative-business-people-working-on-business-project-1536x1024-1.jpg",
-  },
-  {
-    title: "Tailwind Master Kit",
-    link: "/services/customer-support/chat-support",
-    thumbnail: "/images/dsadsadsadas-scaled-1-1536x1024-1.jpg",
-  },
-  {
-    title: "SmartBridge",
-    link: "/services/digital-marketing/content-writing-and-marketing",
-    thumbnail: "/images/fdsacvfgd-scaled-1-1536x1024-1.jpg",
-  },
-  {
-    title: "Renderwork Studio",
-    link: "/services/custom-development/customization",
-    thumbnail: "/images/fsadggfdsz-scaled-1-1536x1024-1.jpg",
-  },
-
-  {
-    title: "Creme Digital",
-    link: "services/customer-support/crm-support",
-    thumbnail: "/images/managers-analyzing-reports-1536x1024-1.jpg",
-  },
-  {
-    title: "Golden Bells Academy",
-    link: "/services/digital-marketing/conversion-rate-optimization",
-    thumbnail: "/images/Mockup-3.jpg",
-  },
-  {
-    title: "Invoker Labs",
+    title: "Website Development",
     link: "/services/custom-development/web-development",
-    thumbnail: "/images",
+    thumbnail: "/images/services/Web-Development.jpg",
   },
   {
-    title: "E Free Invoice",
-    link: "/services/customer-support/chat-support",
-    thumbnail:
-      "/images/business-meeting-and-teamwork-by-business-people-REGXPAZ.jpg",
+    title: "Customer Support",
+    link: "/services/customer-support",
+    thumbnail: "/images/services/Customer-Support.jpg",
+  },
+
+  {
+    title: "Automation",
+    link: "/services/custom-development/automation",
+    thumbnail: "/images/services/Automation.jpg",
+  },
+
+  {
+    title: " ",
+    link: "#",
+    thumbnail: "/images/services/Search-Engine-Marketing-oo.jpg",
+  },
+  {
+    title: "CRM Development",
+    link: "/services/custom-development/crm-development",
+    thumbnail: "/images/services/CRM-Development.jpg",
+  },
+  {
+    title: "Mobile Development",
+    link: "/services/custom-development/mobile-development",
+    thumbnail: "/images/services/Mobile-Development.jpg",
+  },
+  {
+    title: "E-Commerce Marketing",
+    link: "/services/digital-marketing/e-commerce-marketing",
+    thumbnail: "/images/services/E-Commerce-Marketing.jpg",
+  },
+  {
+    title: "Pay Per Click Management",
+    link: "/services/digital-marketing/ppc-management",
+    thumbnail: "/images/services/Pay-Per-Click-(PPC)-Management.jpg",
+  },
+  {
+    title: "YouTube Channel Marketing",
+    link: "/services/digital-marketing/youtube-channel",
+    thumbnail: "/images/services/YouTube-Channel-Marketing.jpg",
+  },
+
+  {
+    title: "App Store Optimization & Marketing",
+    link: "services/digital-marketing/app-store-optimization-and-marketing",
+    thumbnail: "/images/services/App-Store-Optimization-and-Marketing.jpg",
+  },
+  {
+    title: "Quality Assurance",
+    link: "/services/custom-development/quality-assurance",
+    thumbnail: "/images/services/Quality-Assurance.jpg",
+  },
+  {
+    title: "Social Media Marketing",
+    link: "/services/digital-marketing/social-media-marketing",
+    thumbnail: "/images/services/Social-Media-Marketing.jpg",
+  },
+  {
+    title: "CRM Support",
+    link: "/services/customer-support/crm-support",
+    thumbnail: "/images/services/CRM-Support.jpg",
   },
 ];

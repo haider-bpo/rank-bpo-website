@@ -123,12 +123,12 @@ function JobApplicationForm() {
       if (!validExtensions.includes(file.type)) {
         setFileError("Only PDF, DOC, and DOCX files are allowed.");
         setFileName(""); // Clear file name if invalid
-        setValue("cv", null); // Clear file in react-hook-form state
+        setValue("resume", null); // Clear file in react-hook-form state
         return;
       }
       setFileError(""); // Clear any previous error if valid
       setFileName(file.name); // Update the file name
-      setValue("cv", file, { shouldValidate: true }); // Set the file with validation
+      setValue("resume", file, { shouldValidate: true }); // Set the file with validation
     }
   };
 
@@ -243,7 +243,7 @@ function JobApplicationForm() {
           )}
 
           <div>
-            <Label htmlFor="cv">Upload CV</Label>
+            <Label htmlFor="resume">Upload Resume</Label>
             <div
               {...getRootProps()}
               className={`mt-1 flex justify-center px-6 pt-5 pb-6 border-2 rounded-md cursor-pointer ${
@@ -270,10 +270,10 @@ function JobApplicationForm() {
                 {fileError}
               </p>
             )}
-            {errors.cv && (
+            {errors.resume && (
               <p className="text-red-500 text-sm mt-1">
                 <AlertCircle className="inline mr-1" size={16} />
-                {errors.cv.message}
+                {errors.resume.message}
               </p>
             )}
           </div>
