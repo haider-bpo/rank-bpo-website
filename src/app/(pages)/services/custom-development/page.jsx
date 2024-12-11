@@ -6,7 +6,7 @@ import React from "react";
 
 const services = [
   {
-    image: "/images/business-meeting-in-modern-conference-room.jpg",
+    image: "/images/services/Web-Development.jpg",
     title: "Web Development",
     description:
       "Creating dynamic, highly responsive websites that actively engage users and optimize performance across all devices.",
@@ -14,7 +14,7 @@ const services = [
   },
   {
     image:
-      "/images/creative-business-people-working-on-business-project-1536x1024-1.jpg",
+      "/images/services/Mobile-Development.jpg",
     title: "Mobile Development",
     description:
       "Developing innovative mobile applications that provide seamless user experiences across iOS and Android platforms",
@@ -22,14 +22,14 @@ const services = [
   },
   {
     image:
-      "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
+      "/images/services/CRM-Development.jpg",
     title: "CRM Development",
     description:
       "Making custom CRM systems to streamline customer data, improve interaction tracking, and boost client relationships.",
     url: "/services/custom-development/crm-development",
   },
   {
-    image: "/images/business-meeting-in-modern-conference-room.jpg",
+    image: "/images/services/Quality-Assurance.jpg",
     title: "Quality Assurance",
     description:
       "Ensure perfect performance and functionality with rigorous quality assurance testing tailored to your exact needs.",
@@ -37,7 +37,7 @@ const services = [
   },
   {
     image:
-      "/images/creative-business-people-working-on-business-project-1536x1024-1.jpg",
+      "/images/services/Automation.jpg",
     title: "Automation",
     description:
       "Increase productivity by automating several repetitive tasks and optimizing workflows with custom automation solutions.",
@@ -45,7 +45,7 @@ const services = [
   },
   {
     image:
-      "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
+      "/images/services/Customization.jpg",
     title: "Customization",
     description:
       "Modify and enhance existing software or websites to better align with your unique business processes and operational goals.",

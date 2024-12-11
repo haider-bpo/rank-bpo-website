@@ -6,7 +6,7 @@ import React from "react";
 
 const services = [
   {
-    image: "/images/business-meeting-in-modern-conference-room.jpg",
+    image: "/images/services/App-Store-Optimization-and-Marketing.jpg",
     title: "App Store Optimization",
     description:
       "Boost the visibility and number of downloads of your apps with customized optimization and marketing to achieve success.",
@@ -14,7 +14,7 @@ const services = [
   },
   {
     image:
-      "/images/creative-business-people-working-on-business-project-1536x1024-1.jpg",
+      "/images/services/Content-Writing-and-Marketing.jpg",
     title: "content writing and Marketing",
     description:
       "Create compelling content material that connects you with your visitors, building trust and enhancing reputation.",
@@ -22,14 +22,14 @@ const services = [
   },
   {
     image:
-      "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
+      "/images/services/Conversion-Rate-Optimization.jpg",
     title: "conversion rate optimization",
     description:
       "Increase your online advertising effectiveness by utilizing data-driven techniques to convert traffic into paying clients.",
     url: "/services/digital-marketing/conversion-rate-optimization",
   },
   {
-    image: "/images/business-meeting-in-modern-conference-room.jpg",
+    image: "/images/services/E-Commerce-Marketing.jpg",
     title: "e commerce marketing",
     description:
       "Boost sales and customer loyalty by implementing specific marketing techniques that turn visitors into customers.",
@@ -37,7 +37,7 @@ const services = [
   },
   {
     image:
-      "/images/creative-business-people-working-on-business-project-1536x1024-1.jpg",
+      "/images/services/Marketing-Strategy.jpg",
     title: "marketing strategy",
     description:
       "Develop customized marketing plans tailored to fit your unique business image and target audience for highly effective results.",
@@ -45,7 +45,7 @@ const services = [
   },
   {
     image:
-      "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
+      "/images/services/Pay-Per-Click-(PPC)-Management.jpg",
     title: "ppc management",
     description:
       "Make the most of your advertising budget with amazing PPC management, which gives brilliant results and great ROI.",
@@ -53,7 +53,7 @@ const services = [
   },
   {
     image:
-      "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
+      "/images/services/Search-Engine-Marketing.jpg",
     title: "search engine marketing",
     description:
       "Boost your online visibility on search engines with strategically targeted ads that significantly increase conversion rates",
@@ -61,7 +61,7 @@ const services = [
   },
   {
     image:
-      "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
+      "/images/services/search-engine-optimization.jpg",
     title: "search engine optimization",
     description:
       "Drive organic traffic and improve rankings with expertly crafted SEO strategies that enhance visibility and engagement.",
@@ -69,7 +69,7 @@ const services = [
   },
   {
     image:
-      "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
+      "/images/services/Social-Media-Marketing.jpg",
     title: "social media marketing",
     description:
       "Capture and increase your audience on social media platforms with personalized content material and targeted advertising techniques.",
@@ -77,7 +77,7 @@ const services = [
   },
   {
     image:
-      "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
+      "/images/services/YouTube-Channel-Marketing.jpg",
     title: "youtube channel",
     description:
       "Grow the presence of your brand with engaging video content and strategic management of your YouTube channel.",
@@ -90,7 +90,7 @@ function DigitalMarketingPage({ showHeroSection = true }) {
     <>
       {/* hero section  */}
       {showHeroSection && (
-        <ImagesSliderShower title={"Customer Support Services"} />
+        <ImagesSliderShower title={"Digital Marketing Services"} />
       )}
 
       <div className="min-h-[70vh] py-10 grid grid-cols-1 md:grid-cols-[1fr_1fr]">

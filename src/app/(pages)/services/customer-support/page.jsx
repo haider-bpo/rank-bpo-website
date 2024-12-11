@@ -6,7 +6,7 @@ import React from "react";
 
 const services = [
   {
-    image: "/images/business-meeting-in-modern-conference-room.jpg",
+    image: "/images/services/Appointment-Setting.jpg",
     title: "Appointment Setting",
     description:
       "Boost your sales pipeline with efficient appointment-setting services, ensuring you secure more meetings and opportunities with greater efficiency.",
@@ -14,7 +14,7 @@ const services = [
   },
   {
     image:
-      "/images/creative-business-people-working-on-business-project-1536x1024-1.jpg",
+      "/images/services/Chat-Support.jpg",
     title: "Chat Support",
     description:
       "Enhance customer engagement through real-time chat support, delivering instant replies and personalized service.",
@@ -22,14 +22,14 @@ const services = [
   },
   {
     image:
-      "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
+      "/images/services/CRM-Support.jpg",
     title: "CRM Support",
     description:
       "Maximize customer relationship management with our expert support, helping you simplify communications and boost customer satisfaction.",
     url: "/services/customer-support/crm-support",
   },
   {
-    image: "/images/business-meeting-in-modern-conference-room.jpg",
+    image: "/images/services/email-support.jpg",
     title: "Email Support",
     description:
       "Ensure prompt and professional customer service with organized email support, efficiently addressing inquiries and resolving issues.",
@@ -37,7 +37,7 @@ const services = [
   },
   {
     image:
-      "/images/creative-business-people-working-on-business-project-1536x1024-1.jpg",
+      "/images/services/Front-Desk-Support.jpg",
     title: "Front Desk",
     description:
       "Create a strong first impression with our virtual front desk services, managing customer communications and appointments professionally.",
@@ -45,7 +45,7 @@ const services = [
   },
   {
     image:
-      "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
+      "/images/services/Virtual-Assistant.jpg",
     title: "Virtual Assistant",
     description:
       "Boost efficiency and create more time by utilizing our virtual assistants to handle assignments, customer queries, and administrative tasks.",
@@ -53,7 +53,7 @@ const services = [
   },
   {
     image:
-      "/images/business-colleagues-collaborating-and-discussing-project-plans-e1603078432543-1.jpg",
+      "/images/services/Virtual-Order-Taker.jpg",
     title: "Virtual Order Taker",
     description:
       "Simplify your order management process with our virtual order takers, handling transactions accurately and enhancing customer satisfaction.",

@@ -12,20 +12,9 @@ function EventsPage({ showHeroSection = true }) {
       )}
 
       <VideoSection
-        videoUrl="https://youtu.be/sfeehxJ-UXk?si=3HOgeR70twgX1h2Z"
+        videoUrl="https://www.dropbox.com/scl/fi/tu4axqylol49iiju27in5/office-visit.mp4?rlkey=h0h3vlf01kqrwz320jg0pg143&st=ckcjogbk&raw=1"
         overlayText="RankBPO"
       />
-
-      {/* <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/sfeehxJ-UXk?si=3HOgeR70twgX1h2Z"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe> */}
 
       <EventsViewer />
     </>

@@ -23,24 +23,20 @@ const quickLinks = [
     url: "/",
   },
   {
-    title: "About Us",
-    url: "/about-us",
+    title: "Careers",
+    url: "/careers",
   },
   {
     title: "Services",
     url: "/services",
   },
   {
+    title: "About Us",
+    url: "/about-us",
+  },
+  {
     title: "Contact Us",
     url: "/contact-us",
-  },
-  {
-    title: "Projects",
-    url: "/projects",
-  },
-  {
-    title: "Careers",
-    url: "/careers",
   },
 ];
 
@@ -65,7 +61,6 @@ function Footer() {
       <footer className="footer bg-base-200 text-base-content p-10 md:grid md:grid-cols-4 font_barlow">
         <aside data-aos="fade-up">
           <div className="flex-shrink-0 w-40">
-
             <Link href="/" className="ms-0 h-8 md:h-12 ">
               <img
                 src="/images/Rank-BPO-PVT-LTD-LOGO.png"
@@ -76,7 +71,10 @@ function Footer() {
           </div>
 
           <p className="text-justify">
-          Rank BPO is a top-ranked digital marketing agency, expertly maximizing the income streams of our customers within Pakistan and throughout the globe. In our hands lies the power to grow your business!
+            Rank BPO is a top-ranked digital marketing agency, expertly
+            maximizing the income streams of our customers within Pakistan and
+            throughout the globe. In our hands lies the power to grow your
+            business!
           </p>
 
           {/* social media link  */}
@@ -168,7 +166,7 @@ function Footer() {
         className="footer bg-base-200 text-base-content flex justify-center p-5"
       >
         <span className="text-lg font-semibold text-blue-600">
-        © 2021-24 Rank BPO . All Rights Reserved.
+          © 2021-24 Rank BPO . All Rights Reserved.
         </span>
       </footer>
     </>
