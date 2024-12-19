@@ -52,12 +52,12 @@ function CareersPage() {
       <div>
         <div className="relative bg-black bg-center bg-no-repeat bg-cover h-screen">
           <div
-            className="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-[0.26] transition-all duration-300"
+            className="absolute inset-0 bg-center bg-no-repeat bg-cover opacity-[0.05] transition-all duration-300"
             style={{
-              backgroundImage: `url(/images/business-meeting-and-teamwork-by-business-people-REGXPAZ.jpg)`,
+              backgroundImage: `url(/images/careers-banner.webp)`,
             }}
           ></div>
-          <div className="relative z-10 p-10 md:w-[80vw] ps-[8vw] text-start pt-[40vh]">
+          <div className="relative z-10 p-10 md:w-[80vw] ps-[8vw] text-start pt-[30vh]">
             <h1
               data-aos="fade-down"
               className="text-white mt-32 ps-2 text-2xl md:text-5xl font-bold mb-4"
@@ -86,7 +86,7 @@ function CareersPage() {
 
       <div className="p-10 md:px-28">
         <JobNotification
-          profileImage="/images/business-meeting-and-teamwork-by-business-people-REGXPAZ.jpg"
+          profileImage="/images/careers-banner.webp"
           jobTitle="Frontend Developer"
           notificationText="Hi, you have received a job for"
           titleText="Stay Updated with the Latest Job Openings!"
@@ -96,7 +96,7 @@ function CareersPage() {
         />
       </div>
 
-      <JobApplicationForm/>
+      <JobApplicationForm />
 
       {/* available jobs */}
       <div className="p-10 md:px-28 mt-7">
@@ -115,8 +115,7 @@ function CareersPage() {
           we look forward to receiving your application!
         </p>
 
-      <JobListings/>
-
+        <JobListings />
       </div>
 
       {/* offers */}

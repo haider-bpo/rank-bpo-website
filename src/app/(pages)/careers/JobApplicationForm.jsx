@@ -14,9 +14,8 @@ import {
 import { Textarea } from "@/components/ui/textarea";
 import { AlertCircle, Upload } from "lucide-react";
 import { Controller, useForm } from "react-hook-form";
-
-
-
+import axios from "axios";
+import { toast } from "@/hooks/use-toast";
 
 const technicalTeamDepartments = [
   { value: "custom development", label: "Custom Development (Web, App, etc)" },
@@ -28,8 +27,7 @@ const technicalTeamDepartments = [
   { value: "social media", label: "Social Media" },
   { value: "seo", label: "SEO" },
   { value: "others", label: "Others" },
-]
-
+];
 
 const FormInput = ({
   id,
@@ -100,21 +98,85 @@ function JobApplicationForm() {
     control,
     setValue,
     formState: { errors },
+    reset,
   } = useForm();
   const [selectedTeam, setSelectedTeam] = useState("");
   const [selectedDepartment, setSelectedDepartment] = useState("");
-  const [fileName, setFileName] = useState(""); // Track the uploaded file name
-  const [fileError, setFileError] = useState(""); // Track file validation errors
+  const [fileName, setFileName] = useState("");
+  const [fileError, setFileError] = useState("");
 
-  const onSubmit = (data) => {
-    console.log(data);
-    // Handle form submission here
+  const uploadToCloudinary = async (file) => {
+    const cloudinaryURL = `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/upload`;
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append(
+      "upload_preset",
+      process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET
+    ); // Replace with your Cloudinary upload preset
+
+    try {
+      const response = await axios.post(cloudinaryURL, formData);
+      return response.data.secure_url; // Return the uploaded file URL
+    } catch (error) {
+      console.error("Error uploading file to Cloudinary:", error);
+      toast({
+        type: "error",
+        message: "Failed to upload resume. Please try again.",
+        variant: "destructive",
+      });
+      return null;
+    }
+  };
+
+  const onSubmit = async (data) => {
+    const formData = {
+      name: data.fullName,
+      email: data.email,
+      phone: data.phone,
+      city: data.city,
+      experience: data.experience,
+      department: data.department || "",
+    };
+
+    if (data.resume) {
+      const resumeURL = await uploadToCloudinary(data.resume);
+      if (!resumeURL) {
+        return;
+      }
+      formData.resume = resumeURL; // Attach the resume URL
+    }
+
+    try {
+      const response = await axios.post("/api/applicant/create", formData);
+
+      if (!response?.data?.success) {
+        toast({
+          type: "error",
+          message: "Failed to submit application, try again",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      reset();
+
+      toast({
+        type: "success",
+        message: "Application submitted successfully",
+      });
+    } catch (error) {
+      console.error("Error submitting application:", error.message);
+      toast({
+        type: "error",
+        message: "Failed to submit application, try again",
+        variant: "destructive",
+      });
+    }
   };
 
   const onDrop = (acceptedFiles) => {
     const file = acceptedFiles[0];
     if (file) {
-      // Validate file type
       const validExtensions = [
         "application/pdf",
         "application/msword",
@@ -122,13 +184,13 @@ function JobApplicationForm() {
       ];
       if (!validExtensions.includes(file.type)) {
         setFileError("Only PDF, DOC, and DOCX files are allowed.");
-        setFileName(""); // Clear file name if invalid
-        setValue("resume", null); // Clear file in react-hook-form state
+        setFileName("");
+        setValue("resume", null);
         return;
       }
-      setFileError(""); // Clear any previous error if valid
-      setFileName(file.name); // Update the file name
-      setValue("resume", file, { shouldValidate: true }); // Set the file with validation
+      setFileError("");
+      setFileName(file.name);
+      setValue("resume", file, { shouldValidate: true });
     }
   };
 
@@ -152,7 +214,6 @@ function JobApplicationForm() {
             errors={errors}
             validation={{ required: "Full name is required" }}
           />
-
           <FormInput
             id="email"
             label="Email"
@@ -167,7 +228,6 @@ function JobApplicationForm() {
               },
             }}
           />
-
           <FormInput
             id="phone"
             label="Phone"
@@ -181,7 +241,6 @@ function JobApplicationForm() {
               },
             }}
           />
-
           <FormInput
             id="city"
             label="City"
@@ -189,7 +248,6 @@ function JobApplicationForm() {
             errors={errors}
             validation={{ required: "City is required" }}
           />
-
           <div>
             <Label htmlFor="experience">Experience</Label>
             <Textarea
@@ -206,7 +264,6 @@ function JobApplicationForm() {
               </p>
             )}
           </div>
-
           <FormSelect
             name="team"
             control={control}
@@ -218,7 +275,6 @@ function JobApplicationForm() {
             ]}
             setValue={setSelectedTeam}
           />
-
           {selectedTeam === "technical" && (
             <>
               <FormSelect
@@ -229,7 +285,6 @@ function JobApplicationForm() {
                 options={technicalTeamDepartments}
                 setValue={setSelectedDepartment}
               />
-
               {selectedDepartment === "others" && (
                 <FormInput
                   id="otherDepartment"
@@ -241,7 +296,6 @@ function JobApplicationForm() {
               )}
             </>
           )}
-
           <div>
             <Label htmlFor="resume">Upload Resume</Label>
             <div
@@ -277,7 +331,6 @@ function JobApplicationForm() {
               </p>
             )}
           </div>
-
           <div>
             <Button
               type="submit"
@@ -292,4 +345,4 @@ function JobApplicationForm() {
   );
 }
 
-export default JobApplicationForm
+export default JobApplicationForm;

@@ -79,26 +79,26 @@ function Footer() {
 
           {/* social media link  */}
           <div className="flex justify-center items-center gap-x-2 ">
-            <Link href={"https://www.facebook.com/rankbpo/"}>
+            <Link target="_blank" href={"https://www.facebook.com/rankbpo/"}>
               <FaFacebook className="text-3xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
             </Link>
-            <Link href={"https://www.instagram.com/rankbpo/"}>
+            <Link target="_blank" href={"https://www.instagram.com/rankbpo/"}>
               <RiInstagramFill className="text-3xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
             </Link>
-            <Link href={"https://www.youtube.com/@RankBPO"}>
+            <Link target="_blank" href={"https://www.youtube.com/@RankBPO"}>
               <FaYoutube className="text-4xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
             </Link>
-            <Link
+            <Link target="_blank"
               href={
                 "https://www.linkedin.com/company/80291042/admin/feed/posts/"
               }
             >
               <FaLinkedin className="text-3xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
             </Link>
-            <Link href={"https://www.pinterest.com/rankbpo1/"}>
+            <Link target="_blank" href={"https://www.pinterest.com/rankbpo1/"}>
               <FaPinterest className="text-3xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
             </Link>
-            <Link href={"https://www.tiktok.com/@rankbpo"}>
+            <Link target="_blank" href={"https://www.tiktok.com/@rankbpo"}>
               <FaTiktok className="text-3xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
             </Link>
           </div>
@@ -166,7 +166,7 @@ function Footer() {
         className="footer bg-base-200 text-base-content flex justify-center p-5"
       >
         <span className="text-lg font-semibold text-blue-600">
-          © 2021-24 Rank BPO . All Rights Reserved.
+          © 2021-25 Rank BPO . All Rights Reserved.
         </span>
       </footer>
     </>
