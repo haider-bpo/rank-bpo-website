@@ -1,6 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
+import { useForm, Controller } from "react-hook-form";
+import axios from "axios";
+import { AlertCircle, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -12,10 +15,15 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { AlertCircle, Upload } from "lucide-react";
-import { Controller, useForm } from "react-hook-form";
-import axios from "axios";
 import { toast } from "@/hooks/use-toast";
+import ReactConfetti from "react-confetti";
+import { useConfettiAnimation } from "@/hooks/useConfettiAnimation";
+
+const VALID_FILE_TYPES = {
+  "application/pdf": true,
+  "application/msword": true,
+  "application/vnd.openxmlformats-officedocument.wordprocessingml.document": true,
+};
 
 const technicalTeamDepartments = [
   { value: "custom development", label: "Custom Development (Web, App, etc)" },
@@ -28,6 +36,8 @@ const technicalTeamDepartments = [
   { value: "seo", label: "SEO" },
   { value: "others", label: "Others" },
 ];
+
+
 
 const FormInput = ({
   id,
@@ -54,7 +64,7 @@ const FormInput = ({
   </div>
 );
 
-const FormSelect = ({ name, control, errors, label, options, setValue }) => (
+const FormSelect = ({ name, control, errors, label, options, onChange }) => (
   <div>
     <Label htmlFor={name}>{label}</Label>
     <Controller
@@ -65,7 +75,7 @@ const FormSelect = ({ name, control, errors, label, options, setValue }) => (
         <Select
           onValueChange={(value) => {
             field.onChange(value);
-            setValue && setValue(value);
+            onChange?.(value);
           }}
           value={field.value}
         >
@@ -97,6 +107,7 @@ function JobApplicationForm() {
     handleSubmit,
     control,
     setValue,
+    watch,
     formState: { errors },
     reset,
   } = useForm();
@@ -104,19 +115,34 @@ function JobApplicationForm() {
   const [selectedDepartment, setSelectedDepartment] = useState("");
   const [fileName, setFileName] = useState("");
   const [fileError, setFileError] = useState("");
+  const confetti = useConfettiAnimation();
+
+  const teamValue = watch("team");
+
+  useEffect(() => {
+    if (teamValue === "sales") {
+      setValue("department", "sales");
+      setSelectedDepartment("sales");
+    } else if (teamValue === "technical") {
+      setValue("department", "");
+      setSelectedDepartment("");
+    }
+  }, [teamValue, setValue]);
 
   const uploadToCloudinary = async (file) => {
-    const cloudinaryURL = `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/upload`;
     const formData = new FormData();
     formData.append("file", file);
     formData.append(
       "upload_preset",
       process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET
-    ); // Replace with your Cloudinary upload preset
+    );
 
     try {
-      const response = await axios.post(cloudinaryURL, formData);
-      return response.data.secure_url; // Return the uploaded file URL
+      const response = await axios.post(
+        `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/upload`,
+        formData
+      );
+      return response.data.secure_url;
     } catch (error) {
       console.error("Error uploading file to Cloudinary:", error);
       toast({
@@ -129,43 +155,33 @@ function JobApplicationForm() {
   };
 
   const onSubmit = async (data) => {
-    const formData = {
-      name: data.fullName,
-      email: data.email,
-      phone: data.phone,
-      city: data.city,
-      experience: data.experience,
-      department: data.department || "",
-    };
-
-    if (data.resume) {
-      const resumeURL = await uploadToCloudinary(data.resume);
-      if (!resumeURL) {
-        return;
-      }
-      formData.resume = resumeURL; // Attach the resume URL
-    }
-
     try {
+      const formData = {
+        name: data.fullName,
+        email: data.email,
+        phone: data.phone,
+        city: data.city,
+        experience: data.experience,
+        department: data.department || selectedDepartment,
+      };
+
+      if (data.resume) {
+        const resumeURL = await uploadToCloudinary(data.resume);
+        if (!resumeURL) return;
+        formData.resume = resumeURL;
+      }
+
       const response = await axios.post("/api/applicant/create", formData);
 
       if (!response?.data?.success) {
-        toast({
-          type: "error",
-          message: "Failed to submit application, try again",
-          variant: "destructive",
-        });
-        return;
+        throw new Error("Failed to submit application");
       }
 
       reset();
-
-      toast({
-        type: "success",
-        message: "Application submitted successfully",
-      });
+      toast({ type: "success", message: "Application submitted successfully" });
+      confetti.startAnimation();
     } catch (error) {
-      console.error("Error submitting application:", error.message);
+      console.error("Error submitting application:", error);
       toast({
         type: "error",
         message: "Failed to submit application, try again",
@@ -174,34 +190,47 @@ function JobApplicationForm() {
     }
   };
 
-  const onDrop = (acceptedFiles) => {
-    const file = acceptedFiles[0];
-    if (file) {
-      const validExtensions = [
-        "application/pdf",
-        "application/msword",
-        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-      ];
-      if (!validExtensions.includes(file.type)) {
+  const onDrop = useCallback(
+    (acceptedFiles) => {
+      const file = acceptedFiles[0];
+      if (!file) return;
+
+      if (!VALID_FILE_TYPES[file.type]) {
         setFileError("Only PDF, DOC, and DOCX files are allowed.");
         setFileName("");
         setValue("resume", null);
         return;
       }
+
       setFileError("");
       setFileName(file.name);
       setValue("resume", file, { shouldValidate: true });
-    }
-  };
+    },
+    [setValue]
+  );
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
-    accept: ".pdf,.doc,.docx",
+    accept: {
+      "application/pdf": [".pdf"],
+      "application/msword": [".doc"],
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+        [".docx"],
+    },
     maxFiles: 1,
   });
 
   return (
     <div className="min-h-screen w-[60vw] m-auto rounded-md shadow-xl bg-base-200 dark text-gray-100 py-12 px-4 sm:px-6 lg:px-8 ring-2 ring-[#005bea]">
+      {confetti.isAnimating && (
+        <ReactConfetti
+          width={confetti.width}
+          height={confetti.height}
+          numberOfPieces={200}
+          recycle={false}
+          style={{ position: "fixed", top: 0, left: 0, zIndex: 1000 }}
+        />
+      )}
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold mb-8 text-center text-[#005bea]">
           Apply For Job
@@ -273,7 +302,7 @@ function JobApplicationForm() {
               { value: "sales", label: "Sales Team" },
               { value: "technical", label: "Technical Team" },
             ]}
-            setValue={setSelectedTeam}
+            onChange={setSelectedTeam}
           />
           {selectedTeam === "technical" && (
             <>
@@ -283,7 +312,7 @@ function JobApplicationForm() {
                 errors={errors}
                 label="Department"
                 options={technicalTeamDepartments}
-                setValue={setSelectedDepartment}
+                onChange={setSelectedDepartment}
               />
               {selectedDepartment === "others" && (
                 <FormInput

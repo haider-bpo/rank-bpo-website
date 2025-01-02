@@ -31,6 +31,7 @@
     "next": "14.2.9",
     "rank-bpo": "file:",
     "react": "^18",
+    "react-confetti": "^6.2.2",
     "react-countup": "^6.5.3",
     "react-dom": "^18",
     "react-dropzone": "^14.3.5",
