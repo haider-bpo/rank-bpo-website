@@ -1,13 +1,9 @@
-import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
 import MediaPlayer from "@/components/shared/MediaPlayer";
 import React from "react";
 
-function VirtualOrderTaker({ showHeroSection = true }) {
+function VirtualOrderTaker() {
   return (
-    <>
-      {/* hero section  */}
-      {showHeroSection && <ImagesSliderShower title={"virtual order taker"} />}
-
+    <div className="bg-base-200 pt-10">
       <div className="min-h-[70vh] p-10 grid grid-cols-1 md:grid-cols-[1fr_1fr]">
         {/* left side  */}
         <div
@@ -62,7 +58,7 @@ function VirtualOrderTaker({ showHeroSection = true }) {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

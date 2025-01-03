@@ -1,4 +1,3 @@
-import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
 import MediaPlayer from "@/components/shared/MediaPlayer";
 import ServiceCard from "@/components/shared/ServiceCard";
 import Link from "next/link";
@@ -13,16 +12,14 @@ const services = [
     url: "/services/customer-support/appointment-setting",
   },
   {
-    image:
-      "/images/services/Chat-Support.jpg",
+    image: "/images/services/Chat-Support.jpg",
     title: "Chat Support",
     description:
       "Enhance customer engagement through real-time chat support, delivering instant replies and personalized service.",
     url: "/services/customer-support/chat-support",
   },
   {
-    image:
-      "/images/services/CRM-Support.jpg",
+    image: "/images/services/CRM-Support.jpg",
     title: "CRM Support",
     description:
       "Maximize customer relationship management with our expert support, helping you simplify communications and boost customer satisfaction.",
@@ -36,24 +33,21 @@ const services = [
     url: "/services/customer-support/email-support",
   },
   {
-    image:
-      "/images/services/Front-Desk-Support.jpg",
+    image: "/images/services/Front-Desk-Support.jpg",
     title: "Front Desk",
     description:
       "Create a strong first impression with our virtual front desk services, managing customer communications and appointments professionally.",
     url: "/services/customer-support/front-desk",
   },
   {
-    image:
-      "/images/services/Virtual-Assistant.jpg",
+    image: "/images/services/Virtual-Assistant.jpg",
     title: "Virtual Assistant",
     description:
       "Boost efficiency and create more time by utilizing our virtual assistants to handle assignments, customer queries, and administrative tasks.",
     url: "/services/customer-support/virtual-assistant",
   },
   {
-    image:
-      "/images/services/Virtual-Order-Taker.jpg",
+    image: "/images/services/Virtual-Order-Taker.jpg",
     title: "Virtual Order Taker",
     description:
       "Simplify your order management process with our virtual order takers, handling transactions accurately and enhancing customer satisfaction.",
@@ -61,14 +55,9 @@ const services = [
   },
 ];
 
-function CustomerSupportPage({ showHeroSection = true }) {
+function CustomerSupportPage() {
   return (
-    <>
-      {/* hero section  */}
-      {showHeroSection && (
-        <ImagesSliderShower title={"Customer Support Services"} />
-      )}
-
+    <div className="bg-base-200 pt-28">
       <div className="min-h-[70vh] py-10 grid grid-cols-1 md:grid-cols-[1fr_1fr]">
         {/* left side  */}
         <div className="w-full h-full flex items-center mt-4 p-10">
@@ -126,9 +115,9 @@ function CustomerSupportPage({ showHeroSection = true }) {
       </div>
 
       {/* service cards  */}
-      {showHeroSection ? (
-        <div className="flex flex-col items-center gap-2 pb-5">
-          <span className="inline-block mt-20 text-2xl uppercase text-blue-600">
+      <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr]">
+        <div className="text-black/90 flex flex-col items-start pl-10 gap-2 pb-5">
+          <span className="inline-block mt-14 text-2xl uppercase text-red-600">
             Our Services
           </span>
 
@@ -139,32 +128,17 @@ function CustomerSupportPage({ showHeroSection = true }) {
             Explore Our Services
           </p>
         </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr]">
-          <div className="text-black/90 flex flex-col items-start pl-10 gap-2 pb-5">
-            <span className="inline-block mt-14 text-2xl uppercase text-red-600">
-              Our Services
-            </span>
 
-            <p
-              data-aos="fade-up"
-              className="text-3xl md:text-4xl font-extrabold text-md text-opacity-85 font_barlow text-center md:w-[35%]"
-            >
-              Explore Our Services
-            </p>
-          </div>
-
-          <div className="flex justify-end items-center pr-10">
-            <Link
-              href={"/services"}
-              className="btn bg-blue-600 border-0 text-white hover:bg-red-600 hover:scale-110"
-              data-aos="fade-left"
-            >
-              All Services
-            </Link>
-          </div>
+        <div className="flex justify-end items-center pr-10">
+          <Link
+            href={"/services"}
+            className="btn bg-blue-600 border-0 text-white hover:bg-red-600 hover:scale-110"
+            data-aos="fade-left"
+          >
+            All Services
+          </Link>
         </div>
-      )}
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-4 p-10">
         {services.map(({ image, title, description, url }) => (
@@ -177,7 +151,7 @@ function CustomerSupportPage({ showHeroSection = true }) {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

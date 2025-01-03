@@ -1,13 +1,9 @@
-import { ImagesSliderShower } from '@/components/shared/ImagesSliderShower';
-import MediaPlayer from '@/components/shared/MediaPlayer';
-import React from 'react'
+import MediaPlayer from "@/components/shared/MediaPlayer";
+import React from "react";
 
-function SearchEngineOptimization({showHeroSection=true}) {
+function SearchEngineOptimization() {
   return (
-    <>
-      {/* hero section  */}
-      {showHeroSection && <ImagesSliderShower title={"search engine optimization"} />}
-
+    <div className="bg-base-200 pt-10">
       <div className="min-h-[70vh] p-10 grid grid-cols-1 md:grid-cols-[1fr_1fr]">
         {/* left side  */}
         <div
@@ -56,8 +52,8 @@ function SearchEngineOptimization({showHeroSection=true}) {
           </p>
         </div>
       </div>
-    </>
-  )
+    </div>
+  );
 }
 
-export default SearchEngineOptimization
+export default SearchEngineOptimization;

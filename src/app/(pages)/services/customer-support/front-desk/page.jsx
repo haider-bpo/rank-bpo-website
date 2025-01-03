@@ -1,12 +1,9 @@
-import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
 import MediaPlayer from "@/components/shared/MediaPlayer";
 import React from "react";
 
-function FrontDesk({ showHeroSection = true }) {
+function FrontDesk() {
   return (
-    <>
-      {/* hero section  */}
-      {showHeroSection && <ImagesSliderShower title={"front desk"} />}
+    <div className="bg-base-200 pt-10">
 
       <div className="min-h-[70vh] p-10 grid grid-cols-1 md:grid-cols-[1fr_1fr]">
         {/* left side  */}
@@ -61,7 +58,7 @@ function FrontDesk({ showHeroSection = true }) {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

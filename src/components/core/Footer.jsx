@@ -16,6 +16,7 @@ import {
   FaTiktok,
   FaYoutube,
 } from "react-icons/fa6";
+import PrivacyPolicy from "../shared/privacy-policy";
 
 const quickLinks = [
   {
@@ -54,56 +55,21 @@ const services = [
     url: "/services/customer-support",
   },
 ];
+const projects = [
+  {
+    title: "Beauteaze",
+    url: "",
+  },
+  {
+    title: "merijagah",
+    url: "",
+  },
+];
 
 function Footer() {
   return (
-    <>
+    <footer className="bg-base-200">
       <footer className="footer bg-base-200 text-base-content p-10 md:grid md:grid-cols-4 font_barlow">
-        <aside data-aos="fade-up">
-          <div className="flex-shrink-0 w-40">
-            <Link href="/" className="ms-0 h-8 md:h-12 ">
-              <img
-                src="/images/Rank-BPO-PVT-LTD-LOGO.png"
-                alt="Company Logo"
-                className="w-full h-full object-contain"
-              />
-            </Link>
-          </div>
-
-          <p className="text-justify">
-            Rank BPO is a top-ranked digital marketing agency, expertly
-            maximizing the income streams of our customers within Pakistan and
-            throughout the globe. In our hands lies the power to grow your
-            business!
-          </p>
-
-          {/* social media link  */}
-          <div className="flex justify-center items-center gap-x-2 ">
-            <Link target="_blank" href={"https://www.facebook.com/rankbpo/"}>
-              <FaFacebook className="text-3xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
-            </Link>
-            <Link target="_blank" href={"https://www.instagram.com/rankbpo/"}>
-              <RiInstagramFill className="text-3xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
-            </Link>
-            <Link target="_blank" href={"https://www.youtube.com/@RankBPO"}>
-              <FaYoutube className="text-4xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
-            </Link>
-            <Link target="_blank"
-              href={
-                "https://www.linkedin.com/company/80291042/admin/feed/posts/"
-              }
-            >
-              <FaLinkedin className="text-3xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
-            </Link>
-            <Link target="_blank" href={"https://www.pinterest.com/rankbpo1/"}>
-              <FaPinterest className="text-3xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
-            </Link>
-            <Link target="_blank" href={"https://www.tiktok.com/@rankbpo"}>
-              <FaTiktok className="text-3xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
-            </Link>
-          </div>
-        </aside>
-
         {/* Quick link  */}
         <nav className="md:ms-10" data-aos="fade-up">
           <h6 className="footer-title text-[#005BEA]">Quick Links</h6>
@@ -123,6 +89,20 @@ function Footer() {
         <nav data-aos="fade-up">
           <h6 className="footer-title text-[#005BEA] z-10">Services</h6>
           {services.map((link, index) => (
+            <Link
+              key={index}
+              href={link.url}
+              className="text-decoration-none hover:text-[#005BEA] hover:font-semibold"
+            >
+              {link.title}
+            </Link>
+          ))}
+        </nav>
+
+        {/* Projects*/}
+        <nav data-aos="fade-up">
+          <h6 className="footer-title text-[#005BEA] z-10">Projects</h6>
+          {projects.map((link, index) => (
             <Link
               key={index}
               href={link.url}
@@ -160,16 +140,68 @@ function Footer() {
           </div>
         </nav>
       </footer>
+      <footer className="footer bg-base-200 text-base-content p-10 max-w-xl m-auto font_barlow">
+        {/* company detail  */}
+        <aside data-aos="fade-up">
+          <div className="flex-shrink-0 w-40 m-auto">
+            <Link href="/" className="ms-0 h-8 md:h-12 ">
+              <img
+                src="/images/Rank-BPO-PVT-LTD-LOGO.png"
+                alt="Company Logo"
+                className="w-full h-full object-contain"
+              />
+            </Link>
+          </div>
 
-      <footer
+          <p className="text-justify">
+            Rank BPO is a top-ranked digital marketing agency, expertly
+            maximizing the income streams of our customers within Pakistan and
+            throughout the globe. In our hands lies the power to grow your
+            business!
+          </p>
+
+          {/* social media link  */}
+          <div className="flex justify-center items-center gap-x-2 m-auto">
+            <Link target="_blank" href={"https://www.facebook.com/rankbpo/"}>
+              <FaFacebook className="text-3xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
+            </Link>
+            <Link target="_blank" href={"https://www.instagram.com/rankbpo/"}>
+              <RiInstagramFill className="text-3xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
+            </Link>
+            <Link target="_blank" href={"https://www.youtube.com/@RankBPO"}>
+              <FaYoutube className="text-4xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
+            </Link>
+            <Link
+              target="_blank"
+              href={
+                "https://www.linkedin.com/company/80291042/admin/feed/posts/"
+              }
+            >
+              <FaLinkedin className="text-3xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
+            </Link>
+            <Link target="_blank" href={"https://www.pinterest.com/rankbpo1/"}>
+              <FaPinterest className="text-3xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
+            </Link>
+            <Link target="_blank" href={"https://www.tiktok.com/@rankbpo"}>
+              <FaTiktok className="text-3xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
+            </Link>
+          </div>
+        </aside>
+      </footer>
+
+      <div className="flex justify-center bg-[rgb(17,24,39)]">
+        <PrivacyPolicy />
+      </div>
+
+      <div
         data-aos="fade-right"
-        className="footer bg-base-200 text-base-content flex justify-center p-5"
+        className="footer text-base-content flex justify-center p-5 bg-[rgb(17,24,39)]"
       >
         <span className="text-lg font-semibold text-blue-600">
           © 2021-25 Rank BPO . All Rights Reserved.
         </span>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 }
 

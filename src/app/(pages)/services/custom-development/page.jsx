@@ -1,4 +1,3 @@
-import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
 import MediaPlayer from "@/components/shared/MediaPlayer";
 import ServiceCard from "@/components/shared/ServiceCard";
 import Link from "next/link";
@@ -55,11 +54,7 @@ const services = [
 
 function CustomDevelopmentPage({ showHeroSection = true }) {
   return (
-    <>
-      {/* hero section  */}
-      {showHeroSection && (
-        <ImagesSliderShower title={"Custom Development Services"} />
-      )}
+    <container className="bg-base-200 pt-28">
 
       <div className="min-h-[70vh] py-10 grid grid-cols-1 md:grid-cols-[1fr_1fr]">
         {/* left side  */}
@@ -171,7 +166,7 @@ function CustomDevelopmentPage({ showHeroSection = true }) {
           ))}
         </div>
       </div>
-    </>
+    </container>
   );
 }
 

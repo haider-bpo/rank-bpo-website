@@ -1,4 +1,3 @@
-import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
 import MediaPlayer from "@/components/shared/MediaPlayer";
 import ServiceCard from "@/components/shared/ServiceCard";
 import Link from "next/link";
@@ -13,16 +12,14 @@ const services = [
     url: "/services/digital-marketing/app-store-optimization-and-marketing",
   },
   {
-    image:
-      "/images/services/Content-Writing-and-Marketing.jpg",
+    image: "/images/services/Content-Writing-and-Marketing.jpg",
     title: "content writing and Marketing",
     description:
       "Create compelling content material that connects you with your visitors, building trust and enhancing reputation.",
     url: "/services/digital-marketing/content-writing-and-marketing",
   },
   {
-    image:
-      "/images/services/Conversion-Rate-Optimization.jpg",
+    image: "/images/services/Conversion-Rate-Optimization.jpg",
     title: "conversion rate optimization",
     description:
       "Increase your online advertising effectiveness by utilizing data-driven techniques to convert traffic into paying clients.",
@@ -36,48 +33,42 @@ const services = [
     url: "/services/digital-marketing/e-commerce-marketing",
   },
   {
-    image:
-      "/images/services/Marketing-Strategy.jpg",
+    image: "/images/services/Marketing-Strategy.jpg",
     title: "marketing strategy",
     description:
       "Develop customized marketing plans tailored to fit your unique business image and target audience for highly effective results.",
     url: "/services/digital-marketing/marketing-strategy",
   },
   {
-    image:
-      "/images/services/Pay-Per-Click-(PPC)-Management.jpg",
+    image: "/images/services/Pay-Per-Click-(PPC)-Management.jpg",
     title: "ppc management",
     description:
       "Make the most of your advertising budget with amazing PPC management, which gives brilliant results and great ROI.",
     url: "/services/digital-marketing/ppc-management",
   },
   {
-    image:
-      "/images/services/Search-Engine-Marketing.jpg",
+    image: "/images/services/Search-Engine-Marketing.jpg",
     title: "search engine marketing",
     description:
       "Boost your online visibility on search engines with strategically targeted ads that significantly increase conversion rates",
     url: "/services/digital-marketing/search-engine-marketing",
   },
   {
-    image:
-      "/images/services/search-engine-optimization.jpg",
+    image: "/images/services/search-engine-optimization.jpg",
     title: "search engine optimization",
     description:
       "Drive organic traffic and improve rankings with expertly crafted SEO strategies that enhance visibility and engagement.",
     url: "/services/digital-marketing/search-engine-optimization",
   },
   {
-    image:
-      "/images/services/Social-Media-Marketing.jpg",
+    image: "/images/services/Social-Media-Marketing.jpg",
     title: "social media marketing",
     description:
       "Capture and increase your audience on social media platforms with personalized content material and targeted advertising techniques.",
     url: "/services/digital-marketing/social-media-marketing",
   },
   {
-    image:
-      "/images/services/YouTube-Channel-Marketing.jpg",
+    image: "/images/services/YouTube-Channel-Marketing.jpg",
     title: "youtube channel",
     description:
       "Grow the presence of your brand with engaging video content and strategic management of your YouTube channel.",
@@ -85,14 +76,9 @@ const services = [
   },
 ];
 
-function DigitalMarketingPage({ showHeroSection = true }) {
+function DigitalMarketingPage() {
   return (
-    <>
-      {/* hero section  */}
-      {showHeroSection && (
-        <ImagesSliderShower title={"Digital Marketing Services"} />
-      )}
-
+    <div className="bg-base-200 pt-28">
       <div className="min-h-[70vh] py-10 grid grid-cols-1 md:grid-cols-[1fr_1fr]">
         {/* left side  */}
         <div className="w-full h-full flex items-center mt-4 p-10">
@@ -148,20 +134,6 @@ function DigitalMarketingPage({ showHeroSection = true }) {
       </div>
 
       {/* service cards  */}
-      {showHeroSection ? (
-        <div className="flex flex-col items-center gap-2 pb-5">
-          <span className="inline-block mt-20 text-2xl uppercase text-blue-600">
-            Our Services
-          </span>
-
-          <p
-            data-aos="fade-up"
-            className="text-3xl md:text-4xl font-extrabold text-md text-opacity-85 font_barlow text-center md:w-[35%]"
-          >
-            Explore Our Services
-          </p>
-        </div>
-      ) : (
         <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr]">
           <div className="text-black/90 flex flex-col items-start pl-10 gap-2 pb-5">
             <span className="inline-block mt-14 text-2xl uppercase text-red-600">
@@ -186,7 +158,6 @@ function DigitalMarketingPage({ showHeroSection = true }) {
             </Link>
           </div>
         </div>
-      )}
 
       <div className=" grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-4 p-10">
         {services.map(({ image, title, description, url }) => (
@@ -199,7 +170,7 @@ function DigitalMarketingPage({ showHeroSection = true }) {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

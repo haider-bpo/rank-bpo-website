@@ -13,69 +13,6 @@ import { ViewJobDetail } from "./view-job-detail";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-// const jobs = [
-//   {
-//     title: "Head of Global Sales",
-//     postedDate: "Posted 3 days ago",
-//     locationType: "On-site",
-//     location: "Lahore, Punjab, Pakistan",
-//     department: "Global Marketing and Business Development",
-//     employmentType: "Full time",
-//     description:
-//       "This is a full-time position for the role of Head of Global Sales in our Global Marketing and Business Development department, located in Lahore, Punjab, Pakistan. The job posting was posted 3 days ago. This role is on-site based.",
-//   },
-//   {
-//     title: "Associate Software Engineer- JAVA",
-//     postedDate: "Posted 3 days ago",
-//     locationType: "On-site",
-//     location: "Lahore, Punjab, Pakistan",
-//     department: "Cluster Head",
-//     employmentType: "Full time",
-//     description:
-//       "This is a full-time position for the role of Associate Software Engineer- JAVA in our Cluster Head department, located in Lahore, Punjab, Pakistan. The job posting was posted 3 days ago. This role is on-site based.",
-//   },
-//   {
-//     title: "Associate Software Engineer- Python",
-//     postedDate: "Posted 3 days ago",
-//     locationType: "On-site",
-//     location: "Islamabad, Islamabad Capital Territory, Pakistan",
-//     department: "Cluster Head",
-//     employmentType: "Full time",
-//     description:
-//       "This is a full-time position for the role of Associate Software Engineer- Python in our Cluster Head department, located in Islamabad, Islamabad Capital Territory, Pakistan. The job posting was posted 3 days ago. This role is on-site based.",
-//   },
-//   {
-//     title: "2D UI/UX Designer",
-//     postedDate: "Posted 3 days ago",
-//     locationType: "On-site",
-//     location: "Lahore, Punjab, Pakistan",
-//     department: "Cluster Head",
-//     employmentType: "Full time",
-//     description:
-//       "This is a full-time position for the role of 2D UI/UX Designer in our Cluster Head department, located in Lahore, Punjab, Pakistan. The job posting was posted 3 days ago. This role is on-site based.",
-//   },
-//   {
-//     title: "Associate Software Engineer- Python React",
-//     postedDate: "Posted 7 days ago",
-//     locationType: "On-site",
-//     location: "Lahore, Punjab, Pakistan",
-//     department: "Cluster Head",
-//     employmentType: "Full time",
-//     description:
-//       "This is a full-time position for the role of Associate Software Engineer- Python React in our Cluster Head department, located in Lahore, Punjab, Pakistan. The job posting was posted 7 days ago. This role is on-site based.",
-//   },
-//   {
-//     title: "Software Engineer (AI/ML)",
-//     postedDate: "Posted 7 days ago",
-//     locationType: "On-site",
-//     location: "Lahore, Punjab, Pakistan",
-//     department: "Cluster Head",
-//     employmentType: "Full time",
-//     description:
-//       "This is a full-time position for the role of Software Engineer (AI/ML) in our Cluster Head department, located in Lahore, Punjab, Pakistan. The job posting was posted 7 days ago. This role is on-site based.",
-//   },
-// ];
-
 function JobListings() {
   const [jobs, setJobs] = useState([]);
 

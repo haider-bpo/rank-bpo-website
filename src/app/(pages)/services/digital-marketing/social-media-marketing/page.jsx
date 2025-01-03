@@ -1,15 +1,9 @@
-import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
 import MediaPlayer from "@/components/shared/MediaPlayer";
 import React from "react";
 
-function SocialMediaMarketing({ showHeroSection = true }) {
+function SocialMediaMarketing() {
   return (
-    <>
-      {/* hero section  */}
-      {showHeroSection && (
-        <ImagesSliderShower title={"social media marketing"} />
-      )}
-
+    <div className="bg-base-200 pt-10">
       <div className="min-h-[70vh] p-10 grid grid-cols-1 md:grid-cols-[1fr_1fr]">
         {/* left side  */}
         <div
@@ -65,7 +59,7 @@ function SocialMediaMarketing({ showHeroSection = true }) {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

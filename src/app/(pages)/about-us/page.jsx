@@ -8,13 +8,13 @@ import { RiCustomerService2Fill, RiTeamFill } from "react-icons/ri";
 
 function AboutUsPage({ showHeroSection = true }) {
   return (
-    <div className="bg-base-200">
-      {showHeroSection && (
+    <div className="bg-base-200 pt-10">
+      {/* {showHeroSection && (
         <ImagesSliderShower title="About Us" pageName="About Us" />
-      )}
+      )} */}
 
       {/* about us  */}
-      <div className="min-h-[70vh] grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-x-10  p-10">
+      <div className="min-h-[70vh] grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-x-10 p-10">
         {/* left side  */}
 
         <div className="text-white">
@@ -44,7 +44,11 @@ function AboutUsPage({ showHeroSection = true }) {
 
         {/* right side  */}
         <div className="flex justify-center mt-10">
-          <MediaPlayer src={"/videos/creative-idea.json"} />
+          <img
+            src="/images/about-pic.jpeg"
+            alt="Who We Are"
+            className="rounded-lg w-full h-full"
+          />
         </div>
       </div>
 
@@ -53,7 +57,7 @@ function AboutUsPage({ showHeroSection = true }) {
         <div className="flex flex-col justify-center ">
           <div className="flex items-center gap-2 justify-center text-xl">
             <RiCustomerService2Fill className="text-4xl md:text-6xl mt-3" />
-            <NumberAnimation end={1000} suffix={"+"} />
+            <NumberAnimation end={2500} suffix={"+"} />
           </div>
 
           <p className="text-center text-xl text-white">Happy Customers</p>
@@ -73,31 +77,36 @@ function AboutUsPage({ showHeroSection = true }) {
       <div className="min-h-[70vh] grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-x-10  p-10">
         {/* left side  */}
         <div className="flex justify-center">
-          <MediaPlayer src={"/videos/time-management.json"} />
+          <img
+            src="/images/ceo-pic.jpg"
+            alt="Who We Are"
+            className="rounded-lg w-full h-full"
+          />
         </div>
 
         {/* right side  */}
         <div className="text-white">
           <span className="inline-block mt-20 text-2xl uppercase border-b-4 text-blue-600">
-            Who We Are
+            Message From CEO
           </span>
-
-          <h1 data-aos="fade-down" className="mt-10 text-3xl font-semibold">
-            We are Masters in Growing Businesses Digitally!
-          </h1>
 
           <p
             data-aos="fade-up"
             className="mt-5 text-md text-opacity-85 text-justify font_barlow"
           >
-            Rank BPO is a team of qualified and experienced marketers who
-            possess a vision. We don’t encourage a single revenue stream but
-            help our customers with strategic revenue operations. Our aim is to
-            revolutionize the marketing industry by offering reliable digital
-            solutions in the information age. We have technical managers, SEO
-            executives, customer support professionals, copywriters, graphic
-            designers, and other experts to make sprints on your business
-            strategy and lead the dedicated role assigned to them.
+            At Rank BPO, our mission is simple: to enable businesses by
+            optimizing their processes and enhancing efficiency. Since day one,
+            our focus has been on providing innovative solutions, and we have
+            always delivered without fail. With our team, we have not only
+            fulfilled but surpassed all our client&apos;s expectations. The
+            modern corporate landscape requires flexibility and accuracy with an
+            unwavering commitment. And that&apos;s where we step in. With a team
+            of committed experts, Rank BPO has effectively turned challenges
+            into opportunities. We prioritize keeping your business at the top
+            of a competitive market. As we look to the future, we remain
+            committed to fostering innovation and driving success for our
+            clients. Thank you for trusting Rank BPO as your partner in success.
+            Together, let&apos;s achieve greatness. Atif Iqbal CEO, Rank BPO
           </p>
         </div>
       </div>
@@ -173,7 +182,7 @@ function AboutUsPage({ showHeroSection = true }) {
             data-aos="fade-down"
             className="mt-10 text-white text-3xl font-semibold"
           >
-           This is What Our Partners Say
+            This is What Our Partners Say
           </h1>
         </div>
 

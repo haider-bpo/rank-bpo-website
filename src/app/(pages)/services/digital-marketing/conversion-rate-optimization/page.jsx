@@ -1,14 +1,9 @@
-import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
 import MediaPlayer from "@/components/shared/MediaPlayer";
 import React from "react";
 
-function ConversionRateOptimization({ showHeroSection = true }) {
+function ConversionRateOptimization() {
   return (
-    <>
-      {/* hero section  */}
-      {showHeroSection && (
-        <ImagesSliderShower title={"conversion rate optimization"} />
-      )}
+    <div className="bg-base-200 pt-10">
 
       <div className="min-h-[70vh] p-10 grid grid-cols-1 md:grid-cols-[1fr_1fr]">
         {/* left side  */}
@@ -67,7 +62,7 @@ function ConversionRateOptimization({ showHeroSection = true }) {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

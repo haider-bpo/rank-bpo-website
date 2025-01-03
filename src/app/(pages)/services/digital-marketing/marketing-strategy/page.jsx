@@ -1,13 +1,9 @@
-import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
 import MediaPlayer from "@/components/shared/MediaPlayer";
 import React from "react";
 
-function MarketingStrategy({ showHeroSection = true }) {
+function MarketingStrategy() {
   return (
-    <>
-      {/* hero section  */}
-      {showHeroSection && <ImagesSliderShower title={"marketing strategy"} />}
-
+    <div className="bg-base-200 pt-10">
       <div className="min-h-[70vh] p-10 grid grid-cols-1 md:grid-cols-[1fr_1fr]">
         {/* left side  */}
         <div
@@ -62,7 +58,7 @@ function MarketingStrategy({ showHeroSection = true }) {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

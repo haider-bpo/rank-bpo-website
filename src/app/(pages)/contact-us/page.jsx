@@ -23,11 +23,11 @@ function ContactUsPage({ showHeroSection = true }) {
   };
 
   return (
-    <div className="overflow-x-hidden text-white">
+    <div className="overflow-x-hidden text-white pt-10">
       {/* hero section  */}
-      {showHeroSection && (
+      {/* {showHeroSection && (
         <ImagesSliderShower title="Contact Us" pageName="Contact Us" />
-      )}
+      )} */}
 
       {/* contact us section  */}
       <div className="w-full flex flex-col items-center gap-2 pb-5">
