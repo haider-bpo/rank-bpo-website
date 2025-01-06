@@ -40,8 +40,6 @@ const formSchema = z.object({
 });
 
 export function GetInTouchForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -55,10 +53,6 @@ export function GetInTouchForm() {
   const { sendEmail, loading } = useEmail();
 
   async function onSubmit(data) {
-    setIsSubmitting(true);
-
-    console.log("Form Data Submitted:", data);
-
     const templateParams = {
       customer_name: data?.name,
       customer_email: data?.email,
@@ -68,7 +62,7 @@ export function GetInTouchForm() {
 
     await sendEmail(
       templateParams,
-      process.env.NEXT_PUBLIC_EMAILJS_OWNER_TEMPLATE_ID
+      process.env.NEXT_PUBLIC_EMAILJS_GET_IN_TOUCH_TEMPLATE_ID
     );
 
     toast({
@@ -76,7 +70,6 @@ export function GetInTouchForm() {
       description: "We've received your message and will get back to you soon.",
     });
 
-    setIsSubmitting(false);
     form.reset();
   }
 
@@ -173,10 +166,10 @@ export function GetInTouchForm() {
               />
               <Button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={loading}
                 className="w-full bg-[#0066FF] hover:bg-[#0052CC] text-white"
               >
-                {isSubmitting ? "Submitting..." : "Submit"}
+                {loading ? "Submitting..." : "Submit"}
               </Button>
             </form>
           </Form>

@@ -1,13 +1,13 @@
 "use client";
-import React from "react";
 import { useForm } from "react-hook-form";
 import { IoLocationOutline } from "react-icons/io5";
 import { LuPhoneCall } from "react-icons/lu";
 import { MdOutlineAttachEmail } from "react-icons/md";
 import MediaPlayer from "@/components/shared/MediaPlayer";
-import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
+import useEmail from "@/hooks/useEmail";
+import { toast } from "@/hooks/use-toast";
 
-function ContactUsPage({ showHeroSection = true }) {
+function ContactUsPage() {
   const {
     register,
     handleSubmit,
@@ -15,20 +15,33 @@ function ContactUsPage({ showHeroSection = true }) {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (data) => {
-    console.log(data);
+  const { sendEmail, loading } = useEmail();
 
-    // Clear the form fields after submission
+  async function onSubmit(data) {
+    console.log("Form Data Submitted:", data);
+
+    const templateParams = {
+      customer_name: data?.name,
+      customer_email: data?.email,
+      contact_number: data?.phone,
+      message: data?.message,
+    };
+
+    await sendEmail(
+      templateParams,
+      process.env.NEXT_PUBLIC_EMAILJS_CONTACT_US_TEMPLATE_ID
+    );
+
+    toast({
+      title: "Form submitted!",
+      description: "We've received your message and will get back to you soon.",
+    });
+
     reset();
-  };
+  }
 
   return (
     <div className="overflow-x-hidden text-white pt-10">
-      {/* hero section  */}
-      {/* {showHeroSection && (
-        <ImagesSliderShower title="Contact Us" pageName="Contact Us" />
-      )} */}
-
       {/* contact us section  */}
       <div className="w-full flex flex-col items-center gap-2 pb-5">
         <span className="inline-block mt-20 text-2xl uppercase border-b-4 text-blue-600">
@@ -141,7 +154,7 @@ function ContactUsPage({ showHeroSection = true }) {
                   errors.phone ? "border-red-500" : ""
                 }`}
               />
-              {errors.email && (
+              {errors.phone && (
                 <p className="text-red-500 text-xs mt-2">Phone is required</p>
               )}
             </div>
@@ -183,16 +196,17 @@ function ContactUsPage({ showHeroSection = true }) {
                   errors.message ? "border-red-500" : ""
                 }`}
               />
-              {errors.email && (
+              {errors.message && (
                 <p className="text-red-500 text-xs mt-2">Message is required</p>
               )}
             </div>
 
             <button
               type="submit"
+              disabled={loading}
               className="w-full bg-[#314361d3] text-white p-4 mt-10 rounded-md hover:bg-[#283750d3] focus:outline-none focus:ring-2 focus:ring-[#0c131fd3] focus:ring-offset-2"
             >
-              Send
+              {loading ? "Submitting..." : "Submit"}
             </button>
           </form>
         </div>

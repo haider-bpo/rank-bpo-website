@@ -26,18 +26,16 @@ const VALID_FILE_TYPES = {
 };
 
 const technicalTeamDepartments = [
-  { value: "custom development", label: "Custom Development (Web, App, etc)" },
-  { value: "game development", label: "Game Development" },
-  { value: "wordpress development", label: "WordPress" },
-  { value: "graphic designer", label: "Graphic Designer" },
-  { value: "content writer", label: "Content Writer" },
-  { value: "paid marketing", label: "Paid Advertizement" },
-  { value: "social media", label: "Social Media" },
+  { value: "custom-development", label: "Custom Development (Web, App, etc)" },
+  { value: "game-development", label: "Game Development" },
+  { value: "wordpress", label: "WordPress" },
+  { value: "graphic-designer", label: "Graphic Designer" },
+  { value: "content-writer", label: "Content Writer" },
+  { value: "paid-advertisement", label: "Paid Advertizement" },
+  { value: "social-media", label: "Social Media" },
   { value: "seo", label: "SEO" },
   { value: "others", label: "Others" },
 ];
-
-
 
 const FormInput = ({
   id,
