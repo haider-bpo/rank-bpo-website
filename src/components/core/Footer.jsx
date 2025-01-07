@@ -68,13 +68,13 @@ const projects = [
   {
     title: "Beauteaze",
     url: "https://beauteaze.com/",
-    imageUrl: "https://beauteaze.com/cdn/shop/files/logo.png?v=1714589819",
+    imageUrl: "/images/projects/1.png",
   },
   {
     title: "merijagah",
     url: "https://merijagah.com/",
-    imageUrl:
-      "https://merijagah.com/wp-content/uploads/2022/09/PNG-e1663949205492.png",
+    imageUrl: "/images/projects/2.png",
+
   },
 ];
 
