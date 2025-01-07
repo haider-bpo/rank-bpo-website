@@ -3,6 +3,7 @@ import React from "react";
 import AboutUsPage from "../about-us/page";
 import dynamic from "next/dynamic";
 import Testimonials from "@/components/shared/testimonials";
+import { ReelsSection } from "@/components/shared/reels-viewer";
 
 const EventsPage = dynamic(() => import("./../events/page"), { ssr: false });
 
@@ -12,6 +13,7 @@ function HomePage() {
       <HeroSection />
       <AboutUsPage />
       <EventsPage />
+      <ReelsSection />
       <Testimonials />
     </>
   );

@@ -7,6 +7,7 @@ const VideoPlayer = ({
   overlayText = "",
   width = "64rem",
   height = "60.25%",
+  zIndex = 0,
 }) => {
   const [muted, setMuted] = useState(true); // Initially muted
 
@@ -15,7 +16,10 @@ const VideoPlayer = ({
   };
 
   return (
-    <div className="flex justify-center items-center bg-transparent">
+    <div
+      className={`flex justify-center items-center bg-transparent `}
+      style={{ zIndex }}
+    >
       <div
         className="relative rounded-lg overflow-hidden shadow-lg w-full"
         style={{ maxWidth: width }} // Allow width customization
