@@ -23,7 +23,7 @@ export function EventsViewer() {
               url="/videos/office/tour.mp4"
               alt="14 august"
               width={500}
-              height={240}
+              // height={240}
             />
             <Image
               src="/images/office/tour-2024/1.jpg"
@@ -72,7 +72,7 @@ export function EventsViewer() {
               url="/videos/office/gala-night.mp4"
               alt="14 august"
               width={500}
-              height={240}
+              // height={240}
             />
             <Image
               src="/images/office/annual-gathering/1.jpg"
@@ -118,7 +118,7 @@ export function EventsViewer() {
               url="/videos/office/cricket/1.mov"
               alt="14 august"
               width={500}
-              height={240}
+              // height={240}
             />
             <Image
               src="/images/office/cricket/2.jpg"
@@ -138,7 +138,7 @@ export function EventsViewer() {
               url="/videos/office/cricket/2.mov"
               alt="14 august"
               width={500}
-              height={240}
+              // height={240}
             />
           </div>
         </div>
@@ -164,8 +164,6 @@ export function EventsViewer() {
             <VideoPlayer
               url="/videos/office/quran-khawani.mp4"
               alt="14 august"
-              width={800}
-              height={500}
             />
           </div>
         </div>
@@ -188,12 +186,7 @@ export function EventsViewer() {
             all.
           </p>
           <div className="grid gap-4">
-            <VideoPlayer
-              url="/videos/office/womens-day.mp4"
-              alt="14 august"
-              width={800}
-              height={500}
-            />
+            <VideoPlayer url="/videos/office/womens-day.mp4" alt="14 august" />
           </div>
         </div>
       ),
@@ -214,30 +207,75 @@ export function EventsViewer() {
             to progress and prosperity.
           </p>
           <div className="grid grid-cols-2 gap-4">
+            <div className="grid gap-4 my-auto">
+              <Image
+                src="/images/office/14-august/2.jpg"
+                alt="feature template"
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              />
+              <Image
+                src="/images/office/14-august/4.jpg"
+                alt="cards template"
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+              />
+            </div>
             <Image
-              src="/images/office/14-august/1.jpg"
+              src="/images/office/14-august/3.jpeg"
+              alt="bento template"
+              width={500}
+              height={500}
+              objectFit="contain"
+              className="rounded-lg w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
+        </div>
+      ),
+    },
+
+    {
+      title: "Award Night",
+      content: (
+        <div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8 text-justify">
+            Our Award Night is a truly memorable event, where we gather to
+            recognize and celebrate the hard work, dedication, and outstanding
+            achievements of our team. The evening is filled with excitement as
+            we honor individuals who go above and beyond in their roles. Thus
+            making significant contributions to our success. From heartfelt
+            speeches to the presentation of awards, every team member is
+            acknowledged for their unique contributions. It’s a night of
+            gratitude, pride, and celebration, where everyone feels valued and
+            appreciated. The Award Night not only highlights the excellence
+            within our
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <VideoPlayer
+              url="/videos/office/gala-night.mp4"
               alt="14 august"
+              width={500}
+              // height={240}
+            />
+            <Image
+              src="/images/office/annual-gathering/1.jpg"
+              alt="hero template"
               width={500}
               height={500}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/images/office/14-august/2.jpg"
+              src="/images/office/annual-gathering/2.jpg"
               alt="feature template"
               width={500}
               height={500}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/images/office/14-august/3.jpg"
+              src="/images/office/annual-gathering/3.jpg"
               alt="bento template"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-            />
-            <Image
-              src="/images/office/14-august/4.jpg"
-              alt="cards template"
               width={500}
               height={500}
               className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"

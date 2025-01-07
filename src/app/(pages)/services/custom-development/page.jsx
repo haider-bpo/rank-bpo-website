@@ -1,6 +1,5 @@
 import MediaPlayer from "@/components/shared/MediaPlayer";
 import ServiceCard from "@/components/shared/ServiceCard";
-import Link from "next/link";
 import React from "react";
 
 const services = [
@@ -52,7 +51,7 @@ const services = [
   },
 ];
 
-function CustomDevelopmentPage({ showHeroSection = true }) {
+function CustomDevelopmentPage() {
   return (
     <container className="bg-base-200 pt-28">
 
@@ -114,7 +113,6 @@ function CustomDevelopmentPage({ showHeroSection = true }) {
 
       <div>
         {/* service cards  */}
-        {showHeroSection ? (
           <div className="flex flex-col items-center gap-2 pb-5">
             <span className="inline-block mt-20 text-2xl uppercase text-blue-600">
               Our Services
@@ -127,32 +125,7 @@ function CustomDevelopmentPage({ showHeroSection = true }) {
               Explore Our Services
             </p>
           </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-[3fr_1fr]">
-            <div className="text-black/90 flex flex-col items-start pl-10 gap-2 pb-5">
-              <span className="inline-block mt-14 text-2xl uppercase text-red-600">
-                Our Services
-              </span>
-
-              <p
-                data-aos="fade-up"
-                className="text-3xl md:text-4xl font-extrabold text-md text-opacity-85 font_barlow text-center md:w-[35%]"
-              >
-                Explore Our Services
-              </p>
-            </div>
-
-            <div className="flex justify-end items-center pr-10">
-              <Link
-                href={"/services"}
-                className="btn bg-blue-600 border-0 text-white hover:bg-red-600 hover:scale-110"
-                data-aos="fade-left"
-              >
-                All Services
-              </Link>
-            </div>
-          </div>
-        )}
+        
 
         <div className=" grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-4 p-10">
           {services.map(({ image, title, description, url, iconVideoSrc }) => (

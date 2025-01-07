@@ -2,11 +2,9 @@ import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
 import MediaPlayer from "@/components/shared/MediaPlayer";
 import React from "react";
 
-function Automation({ showHeroSection = true }) {
+function Automation() {
   return (
     <div className="bg-base-200 pt-10">
-      {/* hero section  */}
-      {/* {showHeroSection && <ImagesSliderShower title={"automation"} />} */}
 
       <div className="min-h-[70vh] p-10 grid grid-cols-1 md:grid-cols-[1fr_1fr]">
         {/* left side  */}

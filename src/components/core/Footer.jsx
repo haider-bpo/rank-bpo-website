@@ -17,6 +17,7 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 import PrivacyPolicy from "../shared/privacy-policy";
+import Image from "next/image";
 
 const quickLinks = [
   {
@@ -39,6 +40,14 @@ const quickLinks = [
     title: "Contact Us",
     url: "/contact-us",
   },
+  {
+    title: "Blogs",
+    url: "",
+  },
+  {
+    title: "Privacy Policy",
+    url: "",
+  },
 ];
 
 const services = [
@@ -58,11 +67,14 @@ const services = [
 const projects = [
   {
     title: "Beauteaze",
-    url: "",
+    url: "https://beauteaze.com/",
+    imageUrl: "https://beauteaze.com/cdn/shop/files/logo.png?v=1714589819",
   },
   {
     title: "merijagah",
-    url: "",
+    url: "https://merijagah.com/",
+    imageUrl:
+      "https://merijagah.com/wp-content/uploads/2022/09/PNG-e1663949205492.png",
   },
 ];
 
@@ -102,13 +114,20 @@ function Footer() {
         {/* Projects*/}
         <nav data-aos="fade-up">
           <h6 className="footer-title text-[#005BEA] z-10">Projects</h6>
-          {projects.map((link, index) => (
+          {projects.map((project, index) => (
             <Link
-              key={index}
-              href={link.url}
+              key={project.title}
+              href={project.url}
               className="text-decoration-none hover:text-[#005BEA] hover:font-semibold"
+              target="_blank"
             >
-              {link.title}
+              <Image
+                src={project.imageUrl}
+                alt={project.title}
+                width={70}
+                height={100}
+                objectFit="contain"
+              />
             </Link>
           ))}
         </nav>
@@ -135,7 +154,12 @@ function Footer() {
           <div className="cursor-pointer">
             <div className="flex gap-x-2 items-center ">
               <IoLocationOutline className="text-lg text-blue-600" />
-              <p>Plot# 90, Block D2, Phase 1 Johar Town, Lahore</p>
+              <Link
+                href={"https://maps.app.goo.gl/ddtqbe5y91jeqoZP9"}
+                target="_blank"
+              >
+                Plot 90, Block D2, Phase 1 Johar Town, Lahore
+              </Link>
             </div>
           </div>
         </nav>
@@ -162,6 +186,9 @@ function Footer() {
 
           {/* social media link  */}
           <div className="flex justify-center items-center gap-x-2 m-auto">
+            <Link target="_blank" href={"https://maps.app.goo.gl/ddtqbe5y91jeqoZP9"}>
+              <IoLocationOutline className="text-3xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
+            </Link>
             <Link target="_blank" href={"https://www.facebook.com/rankbpo/"}>
               <FaFacebook className="text-3xl text-[#005BEA] hover:scale-110 hover:font-semibold transition-all" />
             </Link>
@@ -189,14 +216,11 @@ function Footer() {
         </aside>
       </footer>
 
-      <div className="flex justify-center bg-[rgb(17,24,39)]">
+      {/* <div className="flex justify-center bg-[rgb(17,24,39)]">
         <PrivacyPolicy />
-      </div>
+      </div> */}
 
-      <div
-        data-aos="fade-right"
-        className="footer text-base-content flex justify-center p-5 bg-[rgb(17,24,39)]"
-      >
+      <div className="footer text-base-content flex justify-center p-5 bg-[rgb(17,24,39)]">
         <span className="text-lg font-semibold text-blue-600">
           © 2021-25 Rank BPO . All Rights Reserved.
         </span>

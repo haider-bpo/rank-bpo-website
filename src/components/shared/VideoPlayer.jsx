@@ -6,7 +6,7 @@ const VideoPlayer = ({
   url,
   overlayText = "",
   width = "64rem",
-  height = "56.25%",
+  height = "60.25%",
 }) => {
   const [muted, setMuted] = useState(true); // Initially muted
 
@@ -17,8 +17,8 @@ const VideoPlayer = ({
   return (
     <div className="flex justify-center items-center bg-transparent">
       <div
-        className="relative rounded-xl overflow-hidden shadow-lg"
-        style={{ width, maxWidth: "100%" }} // Allow width customization
+        className="relative rounded-lg overflow-hidden shadow-lg w-full"
+        style={{ maxWidth: width }} // Allow width customization
       >
         <div
           className="relative w-full h-0 bg-black"
@@ -27,7 +27,7 @@ const VideoPlayer = ({
           {/* Video Element */}
           <video
             src={url}
-            className="absolute top-0 left-0 w-full h-full object-cover z-100"
+            className="absolute top-0 left-0 w-full h-full object-cover"
             muted={muted}
             autoPlay
             loop
@@ -37,22 +37,22 @@ const VideoPlayer = ({
 
         {/* Overlay Text */}
         {overlayText && (
-          <div className="absolute bottom-16 left-4 text-white font-bold text-xl">
+          <div className="absolute bottom-8 left-4 text-white font-bold text-sm sm:text-lg md:text-xl">
             {overlayText}
           </div>
         )}
 
         {/* Mute/Unmute Button */}
         <div
-          className="absolute top-4 right-4 bg-white/50 text-xs p-2 rounded-full cursor-pointer"
+          className="absolute top-4 right-4 bg-white/50 text-xs p-2 rounded-full cursor-pointer md:text-sm"
           onClick={toggleMute}
         >
           {muted ? (
-            <span className="text-black font-bold">
+            <span className="text-black">
               <VolumeOff />
             </span>
           ) : (
-            <span className="text-black font-bold">
+            <span className="text-black">
               <Volume2 />
             </span>
           )}

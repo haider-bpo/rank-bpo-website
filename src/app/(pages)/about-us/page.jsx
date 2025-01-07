@@ -1,18 +1,16 @@
 "use client";
-import { ImagesSliderShower } from "@/components/shared/ImagesSliderShower";
-import MediaPlayer from "@/components/shared/MediaPlayer";
 import NumberAnimation from "@/components/shared/NumberAnimation";
-import { TestimonialCarousel } from "@/components/shared/TestimonialCarousel";
+import Testimonials from "@/components/shared/testimonials";
+import { usePathname } from "next/navigation";
 import React from "react";
 import { RiCustomerService2Fill, RiTeamFill } from "react-icons/ri";
 
-function AboutUsPage({ showHeroSection = true }) {
+function AboutUsPage() {
+  const pathname = usePathname();
+  const showTestimonials = pathname === "/about-us";
+
   return (
     <div className="bg-base-200 pt-10">
-      {/* {showHeroSection && (
-        <ImagesSliderShower title="About Us" pageName="About Us" />
-      )} */}
-
       {/* about us  */}
       <div className="min-h-[70vh] grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-x-10 p-10">
         {/* left side  */}
@@ -45,7 +43,7 @@ function AboutUsPage({ showHeroSection = true }) {
         {/* right side  */}
         <div className="flex justify-center mt-10">
           <img
-            src="/images/about-pic.jpeg"
+            src="/images/about-pic.jpg"
             alt="Who We Are"
             className="rounded-lg w-full h-full"
           />
@@ -172,24 +170,7 @@ function AboutUsPage({ showHeroSection = true }) {
       </div>
 
       {/* testimonials */}
-      <div className="pb-10">
-        <div className="flex flex-col justify-center items-center text-black p-10">
-          <span className="inline-block mt-20 text-2xl uppercase border-b-4 text-blue-600">
-            Testimonials
-          </span>
-
-          <h1
-            data-aos="fade-down"
-            className="mt-10 text-white text-3xl font-semibold"
-          >
-            This is What Our Partners Say
-          </h1>
-        </div>
-
-        <div data-aos="fade-up" className="w-[85vw] m-auto">
-          <TestimonialCarousel />
-        </div>
-      </div>
+      {showTestimonials && <Testimonials />}
     </div>
   );
 }
