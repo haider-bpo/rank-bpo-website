@@ -3,7 +3,7 @@ import { requestHandler } from "@/server/middleware/requestHandler";
 import Job from "@/server/models/job.model";
 
 const getJobs = async (req) => {
-  const jobs = await Job.find(); // Fetch all jobs from the database
+  const jobs = await Job.find().sort({ createdAt: -1 }); // Sort by createdAt in descending order
 
   if (jobs.length === 0) {
     return new APIError("No jobs found", 404);

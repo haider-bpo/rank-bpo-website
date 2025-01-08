@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import { useForm, Controller } from "react-hook-form";
 import axios from "axios";
-import { AlertCircle, Upload } from "lucide-react";
+import { AlertCircle, LoaderCircle, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -113,6 +113,7 @@ function JobApplicationForm() {
   const [selectedDepartment, setSelectedDepartment] = useState("");
   const [fileName, setFileName] = useState("");
   const [fileError, setFileError] = useState("");
+  const [submiting, setSubmiting] = useState(false);
   const confetti = useConfettiAnimation();
 
   const teamValue = watch("team");
@@ -153,6 +154,7 @@ function JobApplicationForm() {
   };
 
   const onSubmit = async (data) => {
+    setSubmiting(true);
     try {
       const formData = {
         name: data.fullName,
@@ -185,6 +187,8 @@ function JobApplicationForm() {
         message: "Failed to submit application, try again",
         variant: "destructive",
       });
+    } finally {
+      setSubmiting(false);
     }
   };
 
@@ -361,9 +365,22 @@ function JobApplicationForm() {
           <div>
             <Button
               type="submit"
+              disable={submiting}
               className="w-full bg-[#005bea] hover:bg-[#0046b5] text-white"
             >
-              Submit Application
+              {submiting ? (
+                <>
+                  <LoaderCircle
+                    className="-ms-1 me-2 animate-spin"
+                    size={16}
+                    strokeWidth={2}
+                    aria-hidden="true"
+                  />
+                  Submiting...
+                </>
+              ) : (
+                "Submit"
+              )}
             </Button>
           </div>
         </form>
