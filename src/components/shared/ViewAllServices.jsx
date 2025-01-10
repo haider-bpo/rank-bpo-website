@@ -7,7 +7,7 @@ function ViewAllServices() {
 
   return (
     <div
-      className="text-white/80 p-10 flex flex-col justify-center items-center"
+      className="bg-[#1A1D21] text-white/80 p-10 flex flex-col justify-center items-center"
       data-aos="fade-left"
     >
       <span className="inline-block mt-5 text-2xl uppercase border-b-4 border-blue-600">
