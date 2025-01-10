@@ -26,6 +26,7 @@ export const servicesData = [
     imageUrl: "https://example.com/custom-development.jpg",
     subServices: [
       {
+        slug: "web-development",
         title: "Web Development",
         subtitle:
           "Build responsive and user-friendly websites tailored to your business needs.",
@@ -51,6 +52,7 @@ export const servicesData = [
         imageUrl: "https://example.com/web-development.jpg",
       },
       {
+        slug: "mobile-development",
         title: "Mobile Development",
         subtitle:
           "Create powerful mobile applications for iOS and Android platforms.",
@@ -66,7 +68,7 @@ export const servicesData = [
           { category: "Platforms", items: ["iOS", "Android"] },
           {
             category: "Frameworks",
-            items: ["React Native", "Flutter", "Swift"],
+            items: ["React Native", "Flutter", "Swift", "Kotlin"],
           },
           { category: "Backend", items: ["Firebase", "Node.js", "GraphQL"] },
         ],
@@ -79,6 +81,7 @@ export const servicesData = [
         imageUrl: "https://example.com/mobile-development.jpg",
       },
       {
+        slug: "crm-development",
         title: "CRM Development",
         subtitle:
           "Develop custom CRM solutions to streamline customer relationship management.",
@@ -110,6 +113,7 @@ export const servicesData = [
         imageUrl: "https://example.com/crm-development.jpg",
       },
       {
+        slug: "quality-assurance",
         title: "Quality Assurance",
         subtitle:
           "Ensure your software is bug-free and performs optimally with rigorous testing.",
@@ -141,6 +145,7 @@ export const servicesData = [
         imageUrl: "https://example.com/quality-assurance.jpg",
       },
       {
+        slug: "customization",
         title: "Customization",
         subtitle:
           "Tailor existing software to meet your specific business requirements.",
@@ -169,6 +174,7 @@ export const servicesData = [
         imageUrl: "https://example.com/customization.jpg",
       },
       {
+        slug: "automation",
         title: "Automation",
         subtitle:
           "Automate repetitive tasks to improve efficiency and reduce errors.",
@@ -241,6 +247,7 @@ export const servicesData = [
     imageUrl: "https://example.com/digital-marketing.jpg",
     subServices: [
       {
+        slug: "search-engine-marketing",
         title: "Search Engine Marketing",
         subtitle:
           "Drive traffic to your website through paid search engine advertising.",
@@ -268,6 +275,7 @@ export const servicesData = [
         imageUrl: "https://example.com/sem.jpg",
       },
       {
+        slug: "social-media-marketing",
         title: "Social Media Marketing",
         subtitle:
           "Engage your audience and grow your brand on social media platforms.",
@@ -306,6 +314,7 @@ export const servicesData = [
         imageUrl: "https://example.com/social-media-marketing.jpg",
       },
       {
+        slug: "marketing-strategy",
         title: "Marketing Strategy",
         subtitle:
           "Develop a comprehensive marketing plan to achieve your business goals.",
@@ -340,6 +349,7 @@ export const servicesData = [
         imageUrl: "https://example.com/marketing-strategy.jpg",
       },
       {
+        slug: "ppc-management",
         title: "Pay Per Click (PPC) Management",
         subtitle: "Optimize your PPC campaigns for maximum ROI.",
         overview:
@@ -369,6 +379,7 @@ export const servicesData = [
         imageUrl: "https://example.com/ppc-management.jpg",
       },
       {
+        slug: "e-commerce-marketing",
         title: "E-Commerce Marketing",
         subtitle: "Increase sales and visibility for your online store.",
         overview:
@@ -402,6 +413,7 @@ export const servicesData = [
         imageUrl: "https://example.com/ecommerce-marketing.jpg",
       },
       {
+        slug: "conversion-rate-optimization",
         title: "Conversion Rate Optimization",
         subtitle:
           "Improve your website's conversion rates through data-driven strategies.",
@@ -432,6 +444,7 @@ export const servicesData = [
         imageUrl: "https://example.com/conversion-rate-optimization.jpg",
       },
       {
+        slug: "youtube-channel",
         title: "YouTube Channel Marketing",
         subtitle:
           "Grow your YouTube channel and engage your audience with targeted marketing.",
@@ -462,6 +475,7 @@ export const servicesData = [
         imageUrl: "https://example.com/youtube-marketing.jpg",
       },
       {
+        slug: "content-writing-and-marketing",
         title: "Content Writing and Marketing",
         subtitle:
           "Create compelling content that drives traffic and conversions.",
@@ -489,6 +503,7 @@ export const servicesData = [
         imageUrl: "https://example.com/content-writing.jpg",
       },
       {
+        slug: "app-store-optimization-and-marketing",
         title: "App Store Optimization and Marketing",
         subtitle:
           "Increase app downloads and visibility through ASO and marketing strategies.",
@@ -519,6 +534,7 @@ export const servicesData = [
         imageUrl: "https://example.com/app-store-optimization.jpg",
       },
       {
+        slug: "search-engine-optimization",
         title: "Search Engine Optimization (SEO)",
         subtitle:
           "Improve your website's search engine rankings and organic traffic.",
@@ -584,6 +600,7 @@ export const servicesData = [
     imageUrl: "https://example.com/customer-support.jpg",
     subServices: [
       {
+        slug: "chat-support",
         title: "Chat Support",
         subtitle: "Provide real-time assistance to customers through chat.",
         overview:
@@ -613,6 +630,7 @@ export const servicesData = [
         imageUrl: "https://example.com/chat-support.jpg",
       },
       {
+        slug: "email-support",
         title: "E-mail Support",
         subtitle: "Handle customer inquiries and issues via email.",
         overview:
@@ -639,6 +657,7 @@ export const servicesData = [
         imageUrl: "https://example.com/email-support.jpg",
       },
       {
+        slug: "crm-support",
         title: "CRM Support",
         subtitle:
           "Manage customer relationships and support through CRM tools.",
@@ -666,6 +685,7 @@ export const servicesData = [
         imageUrl: "https://example.com/crm-support.jpg",
       },
       {
+        slug: "appointment-setting",
         title: "Appointment Setting",
         subtitle: "Schedule and manage appointments for your customers.",
         overview:
@@ -695,6 +715,7 @@ export const servicesData = [
         imageUrl: "https://example.com/appointment-setting.jpg",
       },
       {
+        slug: "virtual-assistant",
         title: "Virtual Assistant",
         subtitle:
           "Provide virtual assistance to handle customer queries and tasks.",
@@ -722,6 +743,7 @@ export const servicesData = [
         imageUrl: "https://example.com/virtual-assistant.jpg",
       },
       {
+        slug: "front-desk",
         title: "Front Desk Support",
         subtitle:
           "Offer front desk support services to manage customer interactions.",
@@ -749,6 +771,7 @@ export const servicesData = [
         imageUrl: "https://example.com/front-desk-support.jpg",
       },
       {
+        slug: "virtual-order-taker",
         title: "Virtual Order Taker",
         subtitle: "Handle customer orders and inquiries virtually.",
         overview:
