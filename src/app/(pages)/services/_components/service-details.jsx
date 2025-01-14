@@ -68,7 +68,9 @@ export default function ServiceDetails({ data }) {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold mb-6">Overview</h2>
+          <h2 className="text-3xl font-bold mb-6">
+            Overview
+          </h2>
           <p className="text-lg text-muted-foreground">{overview}</p>
         </motion.section>
 
@@ -79,7 +81,12 @@ export default function ServiceDetails({ data }) {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold mb-8">Our Process</h2>
+          <h2
+            className="text-3xl font-bold mb-8"
+            accordion
+          >
+            Our Process
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {processes.map((process) => (
               <motion.div
@@ -108,7 +115,13 @@ export default function ServiceDetails({ data }) {
           whileInView="animate"
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold mb-8">Technologies We Use</h2>
+          <motion.h2
+            className="text-3xl font-bold mb-8"
+            
+          >
+            Technologies We Use
+          </motion.h2>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
               <motion.div
@@ -176,7 +189,8 @@ export default function ServiceDetails({ data }) {
           </motion.section>
         )}
 
-        {/* Image Section */}
+        {/* Image Section 
+         */}
         {/* <motion.section
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}

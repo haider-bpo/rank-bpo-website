@@ -40,13 +40,14 @@ export const HeroParallax = ({ products }) => {
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
+    useTransform(scrollYProgress, [0, 0.2], [-500, 300]), // Adjusted translateY range
     springConfig
   );
+
   return (
     <div
       ref={ref}
-      className="h-[330vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[150vh] md:h-[250vh] py-20 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -56,7 +57,6 @@ export const HeroParallax = ({ products }) => {
           translateY,
           opacity,
         }}
-        className=""
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
           {firstRow.map((product) => (
@@ -67,7 +67,7 @@ export const HeroParallax = ({ products }) => {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-40 space-x-20 ">
+        <motion.div className="flex flex-row mb-40 space-x-20">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -85,11 +85,11 @@ export const Header = () => {
   const router = useRouter();
 
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 ">
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
+    <div className="max-w-7xl relative mx-auto py-4 md:py-8 px-4 w-full left-0 top-56">
+      <h1 className="text-2xl md:text-7xl font-bold dark:text-white opacity-100">
         Digital Success Starts Here
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+      <p className="max-w-2xl text-base md:text-xl mt-4 md:mt-8 dark:text-neutral-200">
         Struggling to reach the right audience? Rank BPO can redefine your
         strategy and turn digital challenges into revenue.
       </p>
@@ -120,15 +120,17 @@ export const ProductCard = ({ product, translate }) => {
     >
       <Link
         href={product.link}
-        className="block group-hover/product:shadow-2xl "
+        className="block group-hover/product:shadow-2xl"
       >
-        <Image
-          src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0 rounded-3xl"
-          alt={product.title}
-        />
+        {product?.link && (
+          <Image
+            src={product.thumbnail}
+            height="600"
+            width="600"
+            className="object-cover object-left-top absolute h-full w-full inset-0 rounded-3xl"
+            alt={product.title}
+          />
+        )}
       </Link>
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none rounded-3xl"></div>
       <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">

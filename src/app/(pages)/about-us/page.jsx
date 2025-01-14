@@ -43,7 +43,7 @@ function AboutUsPage() {
         {/* right side  */}
         <div className="flex justify-center mt-10">
           <img
-            src="/images/about-pic.jpg"
+            src="/images/about-pic.jpeg"
             alt="Who We Are"
             className="rounded-lg w-full h-full"
           />

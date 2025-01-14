@@ -658,7 +658,7 @@ export const servicesData = [
       },
       {
         slug: "crm-support",
-        title: "CRM Support",
+        title: "CRM S upport",
         subtitle:
           "Manage customer relationships and support through CRM tools.",
         overview:

@@ -3,7 +3,7 @@ import { HeroParallax } from "../ui/hero-parallax";
 
 function HeroSection() {
   return (
-    <div className="overflow-x-hidden pb-10">
+    <div className="overflow-x-hidden md:pb-10">
       <HeroParallax products={products} />
     </div>
   );
@@ -41,7 +41,8 @@ export const products = [
 
   {
     title: " ",
-    link: "#",
+    // link: "/services/digital-marketing/search-engine-marketing",
+    link: "",
     thumbnail: "/images/services/Search-Engine-Marketing-oo.jpg",
   },
   {
