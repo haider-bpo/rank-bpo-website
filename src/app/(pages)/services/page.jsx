@@ -33,31 +33,36 @@ function ServicesPage({ limit }) {
   const cardsToShow = limit ? cardsdetail.slice(0, limit) : cardsdetail;
 
   return (
-    <div className="bg-base-200 pt-10">
-      {/* service cards  */}
+    <div className="bg-[#1d2026] pt-10">
+      {/* Service Header */}
       <div className="flex flex-col items-center gap-2 pb-5">
         <span className="inline-block mt-20 text-2xl uppercase text-blue-600">
-          Our Services
+          OUR SERVICES
         </span>
 
         <p
           data-aos="fade-up"
-          className="text-3xl md:text-4xl font-extrabold text-md text-opacity-85 font_barlow text-center md:w-[35%]"
+          className="text-3xl md:text-4xl font-extrabold text-white text-opacity-85 font_barlow text-center md:w-[35%]"
         >
           Explore Our Services
         </p>
       </div>
 
-      <div className=" grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-4 p-10">
-        {cardsToShow.map(({ image, title, description, url, iconVideoSrc }) => (
-          <ServiceCard
-            key={title}
-            image={image}
-            title={title}
-            description={description}
-            url={url}
-          />
-        ))}
+      {/* Service Cards Container */}
+      <div className="flex justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-3 gap-6 p-10 max-w-7xl">
+          {cardsToShow.map(
+            ({ image, title, description, url, iconVideoSrc }) => (
+              <ServiceCard
+                key={title}
+                image={image}
+                title={title}
+                description={description}
+                url={url}
+              />
+            )
+          )}
+        </div>
       </div>
     </div>
   );
